@@ -1,0 +1,1333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saima Chand | LinkedIn Content Designer for Founders</title>
+<meta name="description" content="Done-for-you LinkedIn content design for founders and high-level professionals. Carousels, covers and infographics that build authority and bring clients to you.">
+<link rel="icon" href="assets/avatar.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F0ED; --card:#FFFFFF; --band:#F5E7E5; --line:#E6D3CF; --line2:#EDE3DF;
+  --ink:#161616; --body:#2B2A28; --muted:#5C5653;
+  --pink:#F2BCB8; --salmon:#DB9485; --deep:#B8604F; --tint:#A9B3B2; --slate:#384143; --slate2:#465152;
+  --d-bg:#161A1B; --d-card:#232A2B; --d-border:#465152; --d-text:#F4F0ED; --d-2:#CFC9C6; --orange:#EC6328;
+  --r:18px; --max:1200px;
+  --sans:"Inter Tight",ui-sans-serif,system-ui,sans-serif; --serif:"Lora",Georgia,serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--body);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+h1,h2,h3{color:var(--ink);font-family:var(--sans);letter-spacing:-.02em;line-height:1.05}
+h2{font-size:clamp(34px,4.6vw,56px);font-weight:700}
+h3{font-size:23px;font-weight:700;letter-spacing:-.015em;line-height:1.2}
+.kw{color:var(--deep)}
+.lede{font-size:19px;color:var(--body);max-width:620px;margin-top:18px}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:14px;font-weight:600;color:var(--muted);margin-bottom:18px}
+.eyebrow::before{content:"";width:36px;height:1.5px;background:var(--salmon)}
+.eyebrow.c{justify-content:center}
+.eyebrow.c::after{content:"";width:36px;height:1.5px;background:var(--salmon)}
+section{padding:120px 0}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 24px;border-radius:12px;font-weight:700;font-size:16px;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-dark{background:var(--slate);color:#fff;box-shadow:0 10px 24px -10px rgba(56,65,67,.7),inset 0 1px 0 rgba(255,255,255,.12)}
+.btn-dark:hover{background:#2c3436}
+.btn-light{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:0 4px 14px -8px rgba(22,22,22,.18)}
+.btn-orange{background:var(--orange);color:#fff}
+.btn svg{width:18px;height:18px}
+
+/* nav */
+.nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:calc(100% - 32px);max-width:1180px;z-index:50;
+  background:rgba(255,255,255,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:16px;
+  display:flex;align-items:center;justify-content:space-between;padding:10px 12px 10px 16px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--ink);letter-spacing:-.02em}
+.logo img{width:34px;height:34px;border-radius:50%;box-shadow:0 0 0 2px var(--pink)}
+.logo b{color:var(--deep);font-weight:800}
+.nav-links{display:flex;gap:36px;font-size:15px;color:var(--muted);font-weight:500}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{display:flex;align-items:center;gap:18px;font-size:15px;font-weight:600}
+.nav-cta .btn{height:40px;padding:0 16px;font-size:14px;border-radius:10px}
+.burger{display:none;width:40px;height:40px;border-radius:10px;border:1px solid var(--line);align-items:center;justify-content:center}
+.mobile-menu{display:none}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:140px 0 0;overflow:hidden}
+.smoke{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.smoke span{position:absolute;border-radius:50%;filter:blur(70px);opacity:.42;animation:drift 22s ease-in-out infinite alternate}
+.smoke span:nth-child(1){width:520px;height:420px;background:var(--pink);left:-120px;top:60px}
+.smoke span:nth-child(2){width:380px;height:380px;background:var(--salmon);opacity:.22;left:8%;top:44%;animation-duration:28s}
+.smoke span:nth-child(3){width:560px;height:460px;background:var(--pink);right:-160px;top:-40px;opacity:.32;animation-duration:26s}
+.smoke span:nth-child(4){width:340px;height:300px;background:var(--tint);right:12%;bottom:6%;opacity:.22;animation-duration:30s}
+@keyframes drift{to{transform:translate(60px,40px) scale(1.12)}}
+/* hero photo (v8): black & white portrait fading into the cream */
+.hero-photo{position:absolute;top:0;right:0;bottom:0;width:min(46vw,720px);pointer-events:none;z-index:0}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;opacity:.9;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 38%),linear-gradient(180deg,#000 62%,transparent 94%);-webkit-mask-composite:source-in;
+  mask-image:linear-gradient(90deg,transparent 0%,#000 38%),linear-gradient(180deg,#000 62%,transparent 94%);mask-composite:intersect}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(244,240,237,0) 50%,rgba(244,240,237,.0) 100%),rgba(244,240,237,.08);mix-blend-mode:multiply}
+.hero-name{position:absolute;right:36px;bottom:150px;z-index:2;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.78);backdrop-filter:blur(10px);border:1px solid rgba(230,211,207,.9);border-radius:999px;padding:8px 16px 8px 10px;font-size:13.5px;color:var(--muted);box-shadow:0 14px 30px -18px rgba(56,65,67,.45)}
+.hero-name i{width:8px;height:8px;border-radius:50%;background:var(--salmon)}
+.hero-name b{color:var(--ink)}
+.hero .wrap{z-index:1;width:100%}
+.hero-copy{max-width:780px;text-align:left}
+.hero .hero-copy h1{font-size:clamp(40px,4.6vw,68px);margin:28px 0 0;max-width:none;white-space:nowrap}
+.hero .hero-copy p.sub{margin:26px 0 0;max-width:560px;font-size:19px}
+.hero-copy .hero-ctas,.hero-copy .socials{justify-content:flex-start}
+.hero-copy .loved{justify-content:flex-start;text-align:left}
+.hero .marquee{position:relative;z-index:1}
+@media (max-width:1000px){
+  .hero-photo{width:100%;left:0;bottom:auto;height:78vh;opacity:.24}
+  .hero-photo img{object-position:50% 12%;-webkit-mask-image:linear-gradient(180deg,#000 30%,transparent 100%);mask-image:linear-gradient(180deg,#000 30%,transparent 100%)}
+  .hero-name{display:none}
+  .hero-copy{max-width:none;text-align:center}
+  .hero .hero-copy h1{white-space:normal;text-wrap:balance}
+  .hero .hero-copy h1 br{display:none}
+  .hero .hero-copy h1,.hero .hero-copy p.sub{margin-left:auto;margin-right:auto}
+  .hero-copy .hero-ctas,.hero-copy .socials,.hero-copy .loved{justify-content:center}
+  .hero-copy .loved{text-align:center}
+}
+
+.hero .wrap{position:relative}
+.pill{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:#F4F0ED;border-radius:999px;padding:7px 16px 7px 8px;font-size:13.5px;font-weight:600;box-shadow:0 8px 24px -10px rgba(22,22,22,.5)}
+.pill i{font-style:normal;background:var(--pink);color:#1F1F1F;border-radius:999px;padding:2px 9px;font-size:12px;font-weight:800}
+.hero h1{font-size:clamp(44px,7vw,84px);font-weight:800;letter-spacing:-.035em;line-height:1.02;margin:28px auto 0;max-width:1000px}
+.hero p.sub{font-size:20px;max-width:680px;margin:26px auto 0;color:var(--body)}
+.hero-ctas{display:flex;gap:14px;justify-content:center;margin-top:36px;flex-wrap:wrap}
+.hero small{display:block;margin-top:16px;font-size:14px;color:var(--muted)}
+.socials{display:flex;gap:12px;justify-content:center;margin-top:28px}
+.socials a{width:44px;height:44px;border-radius:12px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;transition:.2s}
+.socials a:hover{transform:translateY(-2px);border-color:var(--salmon)}
+.socials svg{width:19px;height:19px;fill:var(--ink)}
+.marquee{width:100%;margin-top:64px;padding:26px 0 30px;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);overflow:hidden}
+.track{display:flex;gap:52px;width:max-content;animation:scroll 40s linear infinite}
+.track span{display:flex;align-items:center;gap:12px;font-size:19px;font-weight:700;color:#2E2E2E;white-space:nowrap;letter-spacing:-.01em}
+.track img{width:40px;height:40px;border-radius:50%;box-shadow:0 0 0 2px #B9B9B9;background:#fff;flex:none;filter:grayscale(1) contrast(1.05)}
+.track small{font-size:14px;font-weight:600;color:#8A8A8A;margin-left:2px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+/* how it works v7: sticky editorial split */
+.hw{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px;align-items:start}
+.hw-side{position:sticky;top:120px}
+.hw-side .lede{font-size:18px}
+.hw-idx{list-style:none;margin:40px 0 36px;position:relative;padding-left:22px}
+.hw-idx::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:2px;background:var(--line2);border-radius:2px}
+.hw-idx .hw-bar{position:absolute;left:0;top:6px;width:2px;height:0;background:var(--deep);border-radius:2px;transition:height .6s cubic-bezier(.2,.8,.2,1)}
+.hw-idx li{padding:11px 0;cursor:pointer;display:grid;grid-template-columns:38px 1fr;align-items:baseline;transition:opacity .4s;opacity:.42}
+.hw-idx li.on{opacity:1}
+.hw-idx em{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--deep)}
+.hw-idx b{font-size:18px;color:var(--ink);font-weight:700;letter-spacing:-.01em}
+.hw-idx span{grid-column:2;font-size:14.5px;color:var(--muted)}
+.hw-main{display:flex;flex-direction:column;gap:28px}
+.hw-card{background:#fff;border:1px solid var(--line2);border-radius:28px;padding:14px;box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 2px 4px rgba(56,65,67,.04),0 34px 70px -40px rgba(56,65,67,.32);transition:transform .5s,box-shadow .5s}
+.hw-card.on{box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 2px 4px rgba(56,65,67,.05),0 44px 90px -40px rgba(56,65,67,.42)}
+.hw-stage{position:relative;height:320px;border-radius:20px;background:radial-gradient(120% 90% at 85% 0%,#F7E3E0 0%,#F4F0ED 55%,#EFE9E5 100%);overflow:hidden;display:flex;align-items:center;justify-content:center;border:1px solid #F0E6E2}
+.hw-copy{display:grid;grid-template-columns:auto 1fr;gap:4px 22px;padding:28px 22px 18px}
+.hw-copy .hw-n{grid-row:span 2;font-family:var(--serif);font-style:italic;font-weight:500;font-size:64px;line-height:.9;color:var(--salmon);letter-spacing:-.03em}
+.hw-copy h3{font-size:26px;color:var(--ink);letter-spacing:-.02em;font-weight:700}
+.hw-copy p{color:var(--body);font-size:16.5px;max-width:520px}
+.hw-tag{position:absolute;top:16px;left:16px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;background:rgba(255,255,255,.7);border:1px solid var(--line2);padding:5px 10px;border-radius:999px;backdrop-filter:blur(6px)}
+.hw-glass{background:rgba(255,255,255,.88);border:1px solid rgba(230,211,207,.9);box-shadow:0 18px 40px -22px rgba(56,65,67,.38);backdrop-filter:blur(10px);border-radius:16px}
+/* 1 brief */
+.hw-brief{width:min(400px,86%);padding:18px 20px}
+.hw-brief .hw-bh{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;padding-bottom:12px;border-bottom:1px solid var(--line2)}
+.hw-brief .hw-bh i{width:8px;height:8px;border-radius:50%;background:var(--salmon);display:inline-block;margin-right:8px}
+.hw-brief dl{display:grid;grid-template-columns:86px 1fr;gap:11px 12px;margin-top:14px;font-size:14px}
+.hw-brief dt{color:var(--muted);font-weight:600}
+.hw-brief dd{color:var(--ink);font-weight:600}
+.hw-brief dd.hw-serif{font-family:var(--serif);font-style:italic;font-weight:500;font-size:15.5px}
+.hw-brief .hw-chips{display:flex;gap:6px;flex-wrap:wrap}
+.hw-brief .hw-chips span{font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;background:var(--band);color:var(--ink)}
+/* 2 fan */
+.hw-fan{position:relative;width:420px;height:280px}
+.hw-fan img{position:absolute;top:22px;width:168px;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:12px;border:4px solid #fff;box-shadow:0 22px 40px -20px rgba(22,22,22,.45);transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.hw-fan img:nth-child(1){left:20px;transform:rotate(-9deg) translateY(14px)}
+.hw-fan img:nth-child(2){left:126px;z-index:2;transform:translateY(-6px)}
+.hw-fan img:nth-child(3){left:232px;transform:rotate(9deg) translateY(14px)}
+.hw-card.on .hw-fan img:nth-child(1){transform:rotate(-12deg) translate(-14px,10px)}
+.hw-card.on .hw-fan img:nth-child(3){transform:rotate(12deg) translate(14px,10px)}
+.hw-chip-ok{position:absolute;z-index:3;display:flex;gap:10px;align-items:center;padding:10px 14px 10px 10px}
+.hw-chip-ok .hw-ok{width:30px;height:30px;border-radius:50%;background:var(--pink);display:grid;place-items:center;flex:none}
+.hw-chip-ok b{display:block;font-size:13.5px;color:var(--ink);line-height:1.2}
+.hw-chip-ok small{font-size:12px;color:var(--muted)}
+/* 3 week */
+.hw-week{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;width:min(520px,90%);padding:16px}
+.hw-week h6{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--muted);font-weight:500;text-align:center;margin-bottom:8px}
+.hw-week .hw-slot{aspect-ratio:4/5;border-radius:10px;overflow:hidden;position:relative;background:#F6F1EE;border:1px dashed var(--line)}
+.hw-week .hw-slot img{width:100%;height:100%;object-fit:cover;object-position:top}
+.hw-week .hw-slot.hw-full{border:1px solid var(--line2);box-shadow:0 10px 20px -14px rgba(22,22,22,.4)}
+.hw-week .hw-slot em{position:absolute;left:6px;bottom:6px;font-style:normal;font-size:10.5px;font-weight:700;background:#fff;color:var(--ink);padding:2px 7px;border-radius:999px}
+.hw-week .hw-slot.hw-eng{display:grid;place-items:center;font-size:11px;font-weight:600;color:var(--muted);text-align:center;padding:4px}
+.hw-week-foot{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--muted);padding-top:12px;border-top:1px solid var(--line2);margin-top:4px}
+.hw-week-foot b{color:var(--ink)}
+/* 4 dm */
+.hw-dm{width:min(400px,86%);padding:0;overflow:hidden;margin-top:34px}
+.hw-dm .hw-top{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line2);font-size:13px;font-weight:700;color:var(--ink)}
+.hw-dm .hw-top .hw-av{width:28px;height:28px;border-radius:50%;background:var(--slate);color:#fff;font-size:11px;display:grid;place-items:center}
+.hw-dm .hw-top small{display:block;font-weight:500;color:var(--muted);font-size:11.5px}
+.hw-dm .hw-body{padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.hw-bub{max-width:78%;padding:9px 13px;border-radius:14px;font-size:14px;line-height:1.4}
+.hw-bub.hw-in{background:#F2ECE9;color:var(--ink);border-bottom-left-radius:4px}
+.hw-bub.hw-in b{letter-spacing:.06em}
+.hw-bub.hw-out{align-self:flex-end;background:var(--slate);color:#fff;border-bottom-right-radius:4px}
+.hw-booked{margin:4px 16px 16px;display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;background:var(--band);font-size:13px;font-weight:700;color:var(--ink)}
+.hw-booked svg{width:18px;height:18px;stroke:var(--deep);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.hw-trail{position:absolute;top:18px;right:16px;display:flex;gap:6px;align-items:center;font-size:11px;font-weight:700;color:var(--muted)}
+.hw-trail i{font-style:normal;color:var(--salmon)}
+@media (max-width:1000px){
+  .hw{grid-template-columns:minmax(0,1fr);gap:40px}
+  .hw-side{position:static}
+  .hw-idx{display:none}
+}
+@media (max-width:640px){
+  .hw-stage{height:auto;min-height:300px;padding:58px 10px 22px}
+  .hw-fan{margin:-30px -60px}
+  .hw-dm{margin-top:0}
+  .hw-ok{right:12px!important;bottom:12px!important}
+  .hw-fan{transform:scale(.78)}
+  .hw-copy{grid-template-columns:1fr;padding:22px 10px 10px}
+  .hw-copy .hw-n{grid-row:auto;font-size:48px;margin-bottom:6px}
+  .hw-copy h3{font-size:22px}
+  .hw-trail{display:none}
+  .hw-week{gap:6px;padding:12px}
+  .hw-slot em{display:none}
+  .hw-eng{font-size:10px!important}
+}
+
+
+/* showcase */
+.showcase .head{max-width:760px}
+.tabs{display:flex;gap:6px;background:#fff;border:1px solid var(--line);padding:5px;border-radius:12px;width:max-content;margin:44px auto 28px;flex-wrap:wrap;justify-content:center}
+.tabs button{padding:9px 18px;border-radius:9px;font-size:15px;font-weight:600;color:var(--muted)}
+.tabs button.on{background:var(--ink);color:#fff}
+.browser{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 40px 80px -40px rgba(56,65,67,.35);overflow:hidden}
+.bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--line2);background:#FBF8F6}
+.bar i{width:11px;height:11px;border-radius:50%;background:var(--line)}
+.bar i:nth-child(1){background:var(--pink)}.bar i:nth-child(2){background:var(--salmon)}.bar i:nth-child(3){background:var(--tint)}
+.url{margin:0 auto;font-family:var(--mono);font-size:12.5px;color:var(--muted);background:#fff;border:1px solid var(--line2);border-radius:8px;padding:4px 14px}
+.app{display:grid;grid-template-columns:220px 1fr;min-height:560px}
+.side{border-right:1px solid var(--line2);padding:20px 16px;background:#FDFBFA}
+.me{display:flex;gap:10px;align-items:center;padding-bottom:16px;border-bottom:1px solid var(--line2);margin-bottom:14px}
+.me img{width:40px;height:40px;border-radius:50%;box-shadow:0 0 0 2px var(--pink)}
+.me b{display:block;color:var(--ink);font-size:14.5px}.me em{font-family:var(--serif);font-size:13px;color:var(--muted)}
+.side a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;font-size:14.5px;color:var(--body);font-weight:500}
+.side a.on{background:var(--band);color:var(--ink);font-weight:700}
+.side a::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--c)}
+.side .stat{margin-top:22px;padding:14px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.side .stat b{font-size:30px;color:var(--ink);font-weight:800;letter-spacing:-.03em;display:block;line-height:1}
+.side .stat span{font-size:13px;color:var(--muted)}
+.main{padding:22px 24px}
+.main-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;gap:12px;flex-wrap:wrap}
+.main-top h4{font-size:20px;color:var(--ink);letter-spacing:-.015em}
+.main-top span{font-size:13px;color:var(--muted)}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;padding:5px 10px;border-radius:999px;background:var(--band);color:var(--ink);border:1px solid var(--line)}
+.chip::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--deep)}
+.pane{display:none;grid-template-columns:repeat(4,1fr);gap:14px}
+.pane.on{display:grid;animation:fade .45s ease}
+/* v10: auto-switch between Client infographics and Animated */
+.tabs button{position:relative;overflow:hidden}
+.tabs button.auto::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:2px;border-radius:2px;background:var(--salmon);transform-origin:left;transform:scaleX(0);animation:tabtime 5s linear forwards}
+.tabs.paused button.auto::after{animation-play-state:paused}
+@keyframes tabtime{to{transform:scaleX(1)}}
+
+@keyframes fade{from{opacity:0;transform:translateY(8px)}}
+.shot{border-radius:12px;overflow:hidden;border:1px solid var(--line2);background:var(--bg);aspect-ratio:4/5;position:relative}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top}
+.shot figcaption{position:absolute;left:8px;bottom:8px;background:rgba(255,255,255,.92);border-radius:8px;padding:4px 9px;font-size:12px;font-weight:700;color:var(--ink)}
+.pane.two{grid-template-columns:repeat(2,1fr)}
+.pane.two .shot{aspect-ratio:auto}
+.kit{grid-column:1/-1;display:grid;grid-template-columns:1.1fr 1fr;gap:16px}
+.kitbox{border:1px solid var(--line);border-radius:14px;padding:20px;background:#fff}
+.sw{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px}
+.sw div{border-radius:10px;aspect-ratio:1;border:1px solid var(--line2);display:flex;align-items:flex-end;padding:7px;font-family:var(--mono);font-size:10.5px;color:#1F1F1F}
+.kitbox h5{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.typespec .t1{font-size:44px;font-weight:800;color:var(--ink);letter-spacing:-.03em;line-height:1;margin-top:14px}
+.typespec .t2{font-family:var(--serif);font-size:24px;color:var(--body);margin-top:10px}
+.typespec .t3{font-size:15px;margin-top:10px;color:var(--body)}
+
+/* workflow */
+.flow-grid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:24px;background:#fff;margin-top:56px;overflow:hidden}
+.step{padding:40px;border-bottom:1px solid var(--line2)}
+.step:nth-child(odd){border-right:1px solid var(--line2)}
+.step:nth-child(n+3){border-bottom:0}
+.step .vis{background:var(--bg);border:1px solid var(--line2);border-radius:16px;padding:20px;min-height:220px;margin-bottom:28px;display:flex;flex-direction:column;justify-content:center}
+.step h3{display:flex;align-items:center;gap:12px}
+.num{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:14px;font-weight:800;color:#1F1F1F;background:var(--c);flex:none}
+.step p{margin-top:10px;max-width:460px}
+.plan{background:#fff;border:1px solid var(--line);border-radius:12px;font-size:14px;overflow:hidden}
+.plan .r{display:flex;justify-content:space-between;gap:10px;padding:10px 14px;border-top:1px solid var(--line2)}
+.plan .r:first-child{border-top:0;font-family:var(--mono);font-size:12px;color:var(--muted);background:#FBF8F6}
+.plan .r b{color:var(--ink);min-width:0}
+.flow-grid>*,.vis{min-width:0}
+.plan .r em{font-style:normal;color:var(--muted);font-weight:600;white-space:nowrap}
+.plan .tot{font-weight:800;color:var(--ink);background:var(--band)}
+.status{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;max-width:360px}
+.status .ok{width:36px;height:36px;border-radius:10px;background:var(--pink);display:grid;place-items:center;flex:none}
+.status b{display:block;color:var(--ink);font-size:15px}.status span{font-size:13px;color:var(--muted)}
+.mini-slides{display:flex;gap:8px;margin-top:14px}
+.mini-slides div{flex:1;aspect-ratio:4/5;border-radius:8px;background:#fff;border:1px solid var(--line);padding:8px;display:flex;flex-direction:column;gap:5px}
+.mini-slides div i{height:5px;border-radius:3px;background:var(--line)}
+.mini-slides div i:first-child{height:8px;width:80%;background:var(--ink)}
+.mini-slides div i.p{background:var(--c);height:24px;margin-top:auto}
+.cal{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;font-size:12px}
+.cal h6{font-family:var(--mono);font-size:11px;color:var(--muted);text-align:center;font-weight:500}
+.cal div{display:flex;flex-direction:column;gap:6px}
+.cal span{background:#fff;border:1px solid var(--line);border-left:4px solid var(--c);border-radius:7px;padding:7px 8px;font-weight:700;color:var(--ink);font-size:12.5px}
+.chain{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center}
+.chain span{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 13px;font-size:14px;font-weight:700;color:var(--ink)}
+.chain span.hot{background:var(--slate);color:#fff;border-color:var(--slate)}
+.chain i{font-style:normal;color:var(--salmon);font-weight:800}
+
+/* dark */
+.dark{background:var(--d-bg);color:var(--d-2);border-radius:36px;margin:0 16px;padding:110px 0;position:relative;overflow:hidden}
+.dark h2,.dark h3{color:var(--d-text)}
+.dark .kw{color:var(--salmon)}
+.dark .eyebrow{color:var(--d-2)}
+.tag-d{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--d-border);background:var(--d-card);color:var(--d-text);font-size:12px;font-weight:700;letter-spacing:.14em;padding:6px 12px;border-radius:999px}
+.tag-d::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--salmon)}
+.coverflow{position:relative;height:560px;margin-top:56px;perspective:1600px}
+.cf{position:absolute;left:50%;top:0;width:min(420px,78vw);transform-origin:center;transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .8s,filter .8s;border-radius:18px;overflow:hidden;border:1px solid var(--d-border);background:var(--d-card);cursor:pointer}
+.cf img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top}
+.cf .cap{position:absolute;inset:auto 0 0 0;padding:70px 22px 20px;background:linear-gradient(transparent,rgba(22,26,27,.94) 55%)}
+.cf .cap b{color:var(--d-text);font-size:24px;letter-spacing:-.02em;display:block}
+.cf .cap span{font-size:14.5px;color:var(--d-2)}
+.cf .lbl{position:absolute;top:14px;left:14px;font-size:12px;font-weight:800;background:var(--pink);color:#1F1F1F;padding:4px 10px;border-radius:999px}
+.dots{display:flex;gap:8px;justify-content:center;margin-top:24px}
+.dots button{width:8px;height:8px;border-radius:99px;background:var(--d-border);transition:.3s}
+.dots button.on{width:28px;background:var(--salmon)}
+.trust{display:flex;gap:20px;justify-content:center;align-items:center;margin-top:56px;padding-top:36px;border-top:1px solid #262d2e;font-size:15px;text-align:center;flex-wrap:wrap}
+.trust b{color:var(--d-text)}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:110px;align-items:start}
+.ba-box{border:1px solid var(--d-border);background:var(--d-card);border-radius:18px;padding:26px;margin-top:22px}
+.ba-box h5{font-size:14px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:14px}
+.ba-box.bad h5{color:var(--tint)}.ba-box.good{border-color:var(--salmon)}.ba-box.good h5{color:var(--pink)}
+.ba-box li{list-style:none;display:flex;gap:12px;padding:8px 0;color:var(--d-text);font-size:16.5px}
+.ba-box li::before{content:"›";color:var(--salmon);font-weight:800}
+.ba-box.bad li{color:var(--d-2)}
+.ba-box.bad li::before{color:var(--tint)}
+.flow{position:relative;width:100%;max-width:360px;min-width:280px;margin:0 auto;display:flex;flex-direction:column;align-items:center}
+.pearl{isolation:isolate;color:rgba(255,255,255,.9);background:#0b0c0c;position:relative;overflow:hidden;box-shadow:rgba(255,255,255,.28) 0 .2rem .45rem inset,rgba(0,0,0,.75) 0 -.08rem .2rem inset,rgba(255,255,255,.3) 0 -.22rem .5rem inset,rgba(0,0,0,.35) 0 .5rem .9rem;transition:transform .25s,box-shadow .25s}
+.pearl::before{content:"";z-index:-1;pointer-events:none;background:rgba(255,255,255,.12);border-radius:50%;height:65%;position:absolute;top:-15%;left:-5%;right:-5%}
+.pearl:hover,.fhub:hover{transform:translateY(-2px) scale(1.04);box-shadow:rgba(255,255,255,.28) 0 .2rem .45rem inset,rgba(0,0,0,.75) 0 -.08rem .2rem inset,rgba(255,255,255,.3) 0 -.22rem .5rem inset,0 0 22px rgba(242,188,184,.35)}
+.fn{width:100%;max-width:320px;border-radius:16px;padding:15px 22px;text-align:center}
+.fn .t,.fs .t{display:flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:16px;color:#fff}
+.fn svg,.fs svg{width:20px;height:20px;flex:none;stroke:var(--pink);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.fn .u,.fs .u{display:block;margin-top:5px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#A9B3B2}
+.frow{width:100%;display:grid;justify-items:center}
+.frow.c2{grid-template-columns:1fr 1fr}.frow.c3{grid-template-columns:1fr 1fr 1fr}
+.fs{max-width:150px;border-radius:14px;padding:11px 12px;text-align:center}
+.fs .t{font-size:12.5px;gap:6px}.fs svg{width:16px;height:16px}
+.fs .u{font-size:9px;margin-top:3px}
+.fsvg{display:block;width:100%;height:64px;overflow:visible;filter:drop-shadow(0 0 3px rgba(242,188,184,.75))}
+.fsvg path{fill:none;stroke:rgba(242,188,184,.9);stroke-width:1.5;vector-effect:non-scaling-stroke;stroke-dasharray:4 4;animation:fdash .8s linear infinite}
+@keyframes fdash{to{stroke-dashoffset:-16}}
+.fline{position:relative;width:1px;height:46px}
+.fline::before{content:"";position:absolute;inset:0;background:var(--pink);filter:blur(3px);opacity:.7}
+.fline::after{content:"";position:absolute;inset:0;background:linear-gradient(var(--pink),rgba(219,148,133,.3))}
+.fhub{width:100%;max-width:320px;border-radius:16px;padding:14px 22px;display:flex;align-items:center;justify-content:center;gap:11px;background:linear-gradient(180deg,#F2BCB8,#DB9485 55%,#B8604F);border:1px solid rgba(242,188,184,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 10px 25px -5px rgba(0,0,0,.6);color:#161616;font-weight:700;font-size:17px;transition:transform .25s,box-shadow .25s}
+.fhub img{width:30px;height:30px;border-radius:50%;box-shadow:0 0 0 2px rgba(255,255,255,.7)}
+.fhub.end{flex-direction:column;gap:10px;padding:20px 22px}
+.fhub.end b{font-size:21px;letter-spacing:-.01em}
+.fhub.end .btn{height:44px;font-size:15px;box-shadow:0 8px 18px -6px rgba(0,0,0,.55)}
+
+/* compare */
+.center{text-align:center}
+.center .lede{margin-left:auto;margin-right:auto}
+.table{margin-top:56px;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:auto}
+table{width:100%;border-collapse:collapse;min-width:760px}
+th,td{padding:18px 22px;text-align:center;font-size:15.5px;border-bottom:1px solid var(--line2)}
+th{font-size:14.5px;color:var(--muted);font-weight:600}
+td:first-child,th:first-child{text-align:left;color:var(--ink);font-weight:600}
+tr:last-child td{border-bottom:0}
+.me-col{background:var(--band)}
+th.me-col{color:var(--ink);font-weight:800}
+.y{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--slate);color:#fff;font-size:13px;font-weight:800}
+.n{color:#9a918d}
+.note{font-size:13.5px;color:var(--muted);margin-top:16px;text-align:center}
+
+/* use cases */
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
+.uc{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px;display:flex;flex-direction:column;transition:.25s}
+.uc:hover{transform:translateY(-4px);box-shadow:0 30px 50px -30px rgba(56,65,67,.35)}
+.ico{width:46px;height:46px;border-radius:12px;background:var(--c);display:grid;place-items:center;margin-bottom:26px}
+.ico svg{width:22px;height:22px;stroke:#1F1F1F;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.uc p{margin-top:12px}
+.uc ul{list-style:none;margin:22px 0 26px;display:flex;flex-direction:column;gap:11px}
+.uc li{display:flex;gap:10px;font-size:15.5px}
+.uc li::before{content:"";flex:none;width:18px;height:18px;border-radius:50%;border:1.8px solid var(--c);margin-top:3px;background:radial-gradient(circle,var(--c) 35%,transparent 40%)}
+.uc .hl{margin-top:auto;padding-top:20px;border-top:1px solid var(--line2);font-weight:800;color:var(--ink);font-size:17px}
+.uc .hl::before{content:"✦ ";color:var(--deep)}
+
+/* demo */
+.demo-grid{display:grid;grid-template-columns:420px 1fr;gap:28px;margin-top:56px;align-items:stretch}
+
+/* v12: featured templates pack */
+.tpl{grid-column:1/-1;display:grid;grid-template-columns:1fr;gap:16px;align-items:center;background:linear-gradient(180deg,#fff,#FBF6F4);border:1px solid var(--line);border-radius:22px;padding:12px 12px 22px;position:relative;overflow:hidden}
+.tpl>div:last-child{padding:0 12px}
+.tpl ul{grid-template-columns:1fr 1fr 1fr;gap:10px}
+.tpl .mos{position:relative;height:210px;border-radius:14px;background:radial-gradient(120% 90% at 20% 0%,#F7E3E0,#F4F0ED 60%);overflow:hidden}
+.tpl .mos img{position:absolute;width:118px;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:9px;border:3px solid #fff;box-shadow:0 14px 26px -14px rgba(22,22,22,.5);filter:blur(5px) saturate(.75);transition:filter .7s,transform .7s}
+.tpl .mos img:nth-child(1){left:8%;top:34px;transform:rotate(-9deg)}
+.tpl .mos img:nth-child(2){left:29%;top:16px;transform:rotate(-3deg);z-index:2}
+.tpl .mos img:nth-child(3){left:50%;top:24px;transform:rotate(4deg);z-index:3}
+.tpl .mos img:nth-child(4){left:70%;top:40px;transform:rotate(10deg);z-index:2}
+.tpl .mos .plus{position:absolute;right:12px;bottom:12px;z-index:4;background:var(--slate);color:#fff;border-radius:12px;padding:8px 12px;font-size:13px;font-weight:700;line-height:1.1;text-align:center}
+.tpl .mos .plus b{display:block;font-size:22px;letter-spacing:-.02em}
+.tpl .tag{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--deep);background:var(--band);border-radius:999px;padding:4px 10px}
+.tpl h4{font-size:24px;line-height:1.1;letter-spacing:-.02em;color:var(--ink);margin:10px 0 8px}
+.tpl ul{list-style:none;display:grid;gap:6px;margin-bottom:14px}
+.tpl li{font-size:14px;color:var(--body);display:flex;gap:8px}
+.tpl li::before{content:"✓";color:var(--deep);font-weight:800}
+.tpl .lockb{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line2);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:700;color:var(--ink)}
+.tpl .lockb svg,.tpl .dlb svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.tpl .dlb{display:none;align-items:center;gap:8px;height:44px;padding:0 18px;border-radius:11px;background:var(--slate);color:#fff;font-size:14.5px;font-weight:700;width:max-content}
+.res.open .tpl .mos img{filter:none}
+.res.open .tpl .lockb{display:none}
+.res.open .tpl .dlb{display:inline-flex}
+@media (max-width:640px){
+  .tpl{padding:10px 10px 18px}
+  .tpl ul{grid-template-columns:1fr}
+  .tpl .mos{height:190px}.tpl .mos img{width:96px}
+  .tpl>div:last-child{padding:0 6px}
+  .tpl .mos img:nth-child(4){display:none}
+  .tpl h4{font-size:21px}
+}
+/* v11: free banner + free resources */
+.gb{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:64px;align-items:center}
+.gb-steps{list-style:none;display:flex;gap:10px;margin:26px 0 28px;flex-wrap:wrap}
+.gb-steps li{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:600;color:var(--ink);background:#fff;border:1px solid var(--line2);border-radius:999px;padding:7px 14px 7px 8px}
+.gb-steps li b{width:22px;height:22px;border-radius:50%;background:var(--band);display:grid;place-items:center;font-size:12px;color:var(--deep)}
+.lead-form{background:#fff;border:1px solid var(--line2);border-radius:22px;padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:12px;box-shadow:0 30px 60px -42px rgba(56,65,67,.45)}
+.lead-form label{font-size:13px;font-weight:700;color:var(--ink);display:block}
+.lead-form input{width:100%;font:inherit;font-size:15.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:11px;padding:12px 14px;margin-top:6px;outline:none;transition:border-color .2s,box-shadow .2s}
+.lead-form input:focus{border-color:var(--salmon);box-shadow:0 0 0 3px rgba(242,188,184,.45)}
+.lead-form .btn{grid-column:1/-1;justify-content:center;width:100%}
+.lead-form .fine{grid-column:1/-1;font-size:13px;color:var(--muted);text-align:center}
+.lead-done{display:none;align-items:center;gap:14px;background:#fff;border:1px solid var(--line2);border-radius:22px;padding:22px;box-shadow:0 30px 60px -42px rgba(56,65,67,.45)}
+.lead-done.on{display:flex}
+.lead-done .ok{width:44px;height:44px;border-radius:50%;background:var(--pink);display:grid;place-items:center;flex:none}
+.lead-done b{display:block;color:var(--ink);font-size:17px}
+.lead-done span{font-size:14.5px;color:var(--muted)}
+.pmock{position:relative;background:#fff;border:1px solid var(--line2);border-radius:22px;overflow:hidden;box-shadow:0 2px 4px rgba(56,65,67,.04),0 40px 80px -44px rgba(56,65,67,.45)}
+.pmock .bn{position:relative;aspect-ratio:4/1;background:var(--band)}
+.pmock .bn img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease}
+.pmock .bn img.on{opacity:1}
+.pmock .pb{padding:0 24px 22px;position:relative}
+.pmock .pav{width:96px;height:96px;border-radius:50%;background:linear-gradient(180deg,#EDE3DF,#E2D3CE);border:4px solid #fff;margin-top:-48px;display:grid;place-items:center;font-size:30px;font-weight:800;color:#fff}
+.pmock .ln{height:12px;border-radius:6px;background:#EFE7E3;margin-top:10px}
+.pmock .ln.a{width:46%;height:16px;background:#E6DAD5;margin-top:14px}.pmock .ln.b{width:72%}.pmock .ln.c{width:38%}
+.pmock .pm-who{position:absolute;right:22px;bottom:22px;font-size:12.5px;color:var(--muted);font-weight:600}
+.pmock .pm-who b{color:var(--ink)}
+.gb-vis{position:relative}
+.gb-vis .free{position:absolute;left:-18px;top:-18px;z-index:2;background:var(--slate);color:#fff;border-radius:16px;padding:12px 16px;box-shadow:0 18px 36px -18px rgba(22,22,22,.55);font-size:13px;line-height:1.25}
+.gb-vis .free b{display:block;font-size:20px;letter-spacing:-.01em}
+.gb-dots{display:flex;gap:6px;justify-content:center;margin-top:16px}
+.gb-dots i{width:7px;height:7px;border-radius:9px;background:var(--line);transition:.4s}
+.gb-dots i.on{width:22px;background:var(--salmon)}
+/* resources */
+.rs{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:40px;margin-top:56px;align-items:start}
+.quiz{background:#fff;border:1px solid var(--line2);border-radius:26px;padding:28px;box-shadow:0 2px 4px rgba(56,65,67,.04),0 40px 80px -48px rgba(56,65,67,.45);position:sticky;top:110px}
+.qbar{display:flex;gap:6px;margin-bottom:22px}
+.qbar i{flex:1;height:4px;border-radius:4px;background:var(--line2);transition:background .4s}
+.qbar i.on{background:var(--salmon)}
+.qstep{display:none}.qstep.on{display:block;animation:fade .4s ease}
+.qstep small{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.qstep h3{font-size:24px;color:var(--ink);letter-spacing:-.02em;margin:6px 0 18px}
+.qstep .lead-form{box-shadow:none;border:0;padding:0;grid-template-columns:1fr}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opt{text-align:left;font:inherit;font-size:15px;font-weight:600;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:14px 16px;cursor:pointer;display:flex;align-items:center;gap:10px;transition:border-color .2s,background .2s,transform .2s}
+.opt:hover{border-color:var(--salmon);background:#fff;transform:translateY(-1px)}
+.opt.sel{border-color:var(--deep);background:var(--band)}
+.opt i{font-style:normal;width:26px;height:26px;border-radius:8px;background:#fff;border:1px solid var(--line2);display:grid;place-items:center;font-size:14px;flex:none}
+.qback{margin-top:16px;font-size:14px;font-weight:600;color:var(--muted);background:none;border:0;cursor:pointer;padding:0}
+.qback:hover{color:var(--ink)}
+.qdone{text-align:left}
+.qdone .ok{width:48px;height:48px;border-radius:50%;background:var(--pink);display:grid;place-items:center;margin-bottom:14px}
+.qdone p{color:var(--body);margin:8px 0 18px}
+.res{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.rcard{position:relative;background:#fff;border:1px solid var(--line2);border-radius:18px;padding:10px;transition:transform .3s,box-shadow .3s}
+.rcard:hover{transform:translateY(-3px);box-shadow:0 24px 44px -30px rgba(56,65,67,.45)}
+.rcard .th{position:relative;aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:var(--bg)}
+.rcard .th img{width:100%;height:100%;object-fit:cover;object-position:top;filter:blur(7px) saturate(.7);transform:scale(1.06);transition:filter .7s,transform .7s}
+.rcard .lock{position:absolute;inset:0;display:grid;place-items:center;background:rgba(244,240,237,.35)}
+.rcard .lock span{display:flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line2);border-radius:999px;padding:7px 13px;font-size:12.5px;font-weight:700;color:var(--ink);box-shadow:0 10px 22px -14px rgba(22,22,22,.45)}
+.rcard .lock svg,.rcard .dl svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.rcard h4{font-size:15.5px;color:var(--ink);margin:12px 4px 2px;letter-spacing:-.01em}
+.rcard p{font-size:13.5px;color:var(--muted);margin:0 4px 8px}
+.rcard .dl{display:none;align-items:center;justify-content:center;gap:7px;margin:0 4px 4px;height:38px;border-radius:10px;background:var(--slate);color:#fff;font-size:13.5px;font-weight:700}
+.rcard .rec{display:none;position:absolute;top:18px;left:18px;z-index:2;background:var(--deep);color:#fff;font-size:11px;font-weight:700;letter-spacing:.04em;padding:4px 9px;border-radius:999px}
+.res.open .rcard .th img{filter:none;transform:none}
+.res.open .rcard .lock{display:none}
+.res.open .rcard .dl{display:flex}
+.res.open .rcard.is-rec .rec{display:block}
+.res.open .rcard.is-rec{border-color:var(--salmon)}
+@media (max-width:1000px){
+  .gb{grid-template-columns:minmax(0,1fr);gap:48px}
+  .rs{grid-template-columns:minmax(0,1fr)}
+  .quiz{position:static}
+}
+@media (max-width:640px){
+  .lead-form{grid-template-columns:1fr}
+  .opts{grid-template-columns:1fr}
+  .quiz{padding:22px}
+  .res{gap:10px}
+  .rcard h4{font-size:14px}.rcard p{display:none}
+  .gb-vis .free{left:-6px;top:-14px;padding:10px 12px}
+  .gb-vis .free b{font-size:17px}
+}
+
+.form{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:14px;box-shadow:0 30px 60px -40px rgba(56,65,67,.4)}
+.form label{font-size:13.5px;font-weight:700;color:var(--ink)}
+.form input,.form select,.form textarea{width:100%;font:inherit;font-size:15.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-top:6px;outline:none}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--salmon);box-shadow:0 0 0 3px rgba(242,188,184,.45)}
+.form .btn{justify-content:center;width:100%;margin-top:6px}
+.out{border:1.5px dashed var(--line);border-radius:20px;background:rgba(255,255,255,.55);display:flex;align-items:center;justify-content:center;padding:26px;min-height:380px}
+.empty{text-align:center;color:var(--muted);font-size:15px}
+.empty svg{width:44px;height:44px;stroke:var(--salmon);fill:none;stroke-width:1.6;margin:0 auto 12px}
+.deck{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;width:100%}
+.sl{aspect-ratio:4/5;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;font-size:11.5px;line-height:1.3;color:var(--body);opacity:0;transform:translateY(10px);animation:pop .5s forwards;position:relative}
+.sl:nth-child(2){animation-delay:.1s}.sl:nth-child(3){animation-delay:.2s}.sl:nth-child(4){animation-delay:.3s}.sl:nth-child(5){animation-delay:.4s}
+@keyframes pop{to{opacity:1;transform:none}}
+.sl small{font-family:var(--mono);font-size:9.5px;color:var(--muted)}
+.sl b{font-size:14px;color:var(--ink);letter-spacing:-.01em;margin-top:8px;font-weight:800;line-height:1.15}
+.sl .bar2{margin-top:auto;height:4px;border-radius:3px;background:var(--c)}
+.sl.cover{background:var(--band)}
+.sl.cover b{font-size:16px}
+.deck-note{grid-column:1/-1;font-size:14px;color:var(--muted);margin-top:6px}
+
+/* testimonials */
+.t-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.badge .faces img{width:34px;height:34px;border-color:#fff}
+.badge{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 16px}
+.badge b{font-size:28px;font-weight:800;color:var(--ink);letter-spacing:-.03em}
+.badge span{font-size:13px;color:var(--muted);line-height:1.3}
+.t-marq{overflow:hidden;margin-top:48px;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.t-track{display:flex;gap:20px;width:max-content;animation:scroll 90s linear infinite;align-items:flex-start}
+.t-marq:hover .t-track{animation-play-state:paused}
+.tc{width:400px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:22px}
+.tc q{font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--body);quotes:none}
+.tc q::before{content:"\201C";display:block;font-size:46px;line-height:.6;color:var(--salmon);margin-bottom:10px}
+.who{display:flex;align-items:center;gap:12px;margin-top:auto}
+.who i{width:40px;height:40px;border-radius:50%;background:var(--c);display:grid;place-items:center;font-style:normal;font-weight:800;color:#1F1F1F;font-size:15px}
+.who b{display:block;color:var(--ink);font-size:15.5px}.who span{font-size:13px;color:var(--muted)}
+
+/* pricing */
+.calc{display:grid;grid-template-columns:1fr 1fr;background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;margin-top:56px}
+.calc-l{padding:36px}
+.calc-l h5{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--muted);font-weight:500;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.calc-l h5 i{width:30px;height:30px;border-radius:9px;background:var(--pink);display:grid;place-items:center;font-style:normal}
+.rng{margin-bottom:26px}
+.rng div{display:flex;justify-content:space-between;font-size:15.5px;margin-bottom:10px}
+.rng b{color:var(--ink)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:9px;background:linear-gradient(90deg,var(--salmon) var(--p,30%),var(--line) var(--p,30%));outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid var(--slate);cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#fff;border:3px solid var(--slate);cursor:pointer}
+.calc-l small{font-size:13.5px;color:var(--muted)}
+.calc-r{background:var(--slate);color:#fff;padding:36px;display:flex;flex-direction:column;gap:22px}
+.res{border-bottom:1px solid rgba(255,255,255,.14);padding-bottom:22px}
+.res span{font-size:14px;color:#D9DEDD;display:flex;gap:8px;align-items:center}
+.res b{display:block;font-size:clamp(44px,5vw,60px);font-weight:800;letter-spacing:-.04em;line-height:1.05;margin-top:6px;color:#fff}
+.res b small{font-size:.45em;font-weight:700;color:var(--pink);letter-spacing:0}
+.res em{font-style:normal;font-size:14px;color:#D9DEDD}
+.calc-r .btn{background:#fff;color:var(--ink);justify-content:center;margin-top:auto}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.plan-c{background:#fff;border:1px solid var(--line);border-radius:22px;padding:32px;display:flex;flex-direction:column;position:relative}
+.plan-c.pop{border:2px solid var(--ink);box-shadow:0 40px 70px -40px rgba(56,65,67,.5)}
+.plan-c .flag{position:absolute;top:-13px;left:28px;background:var(--ink);color:#fff;font-family:var(--mono);font-size:11px;letter-spacing:.1em;padding:5px 10px;border-radius:6px}
+.plan-c .no{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.plan-c h3{font-size:30px;margin-top:6px}
+.plan-c .d{font-size:15.5px;margin-top:6px;min-height:48px}
+.price{font-size:44px;font-weight:800;color:var(--ink);letter-spacing:-.04em;margin-top:22px;line-height:1}
+.price small{font-size:16px;font-weight:600;color:var(--muted);letter-spacing:0}
+.plan-c .sm{font-size:13.5px;color:var(--muted);margin-top:6px}
+.plan-c ul{list-style:none;margin:24px 0 28px;padding-top:22px;border-top:1px solid var(--line2);display:flex;flex-direction:column;gap:11px}
+.plan-c li{display:flex;gap:10px;font-size:15.5px}
+.plan-c li::before{content:"✓";color:var(--slate);font-weight:800}
+.plan-c .btn{justify-content:center;margin-top:auto}
+.kitband{margin-top:40px;border-radius:24px;padding:34px 36px;display:flex;align-items:center;gap:28px;border:1.5px solid var(--salmon);
+  background:linear-gradient(120deg,rgba(242,188,184,.42),rgba(219,148,133,.30)),#fff}
+.kitband .glyph{width:84px;height:84px;border-radius:18px;background:#fff;border:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:5px;padding:12px;flex:none}
+.kitband .glyph i{border-radius:5px;background:var(--c)}
+.kitband .tg{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;color:var(--ink);background:rgba(255,255,255,.75);border-radius:999px;padding:4px 10px;display:inline-block;margin-bottom:10px}
+.kitband h3{font-size:26px}
+.kitband p{margin-top:6px;max-width:640px;color:var(--body)}
+.kitband .btn{margin-left:auto;flex:none}
+
+/* faq */
+.faq{display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:start}
+details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 22px;font-weight:600;color:var(--ink);font-size:17px;cursor:pointer}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";width:9px;height:9px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(-45deg);transition:.25s;flex:none}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 22px 22px;font-size:16px}
+
+/* final */
+.final{position:relative;text-align:center;padding:150px 0 120px;overflow:hidden}
+.final h2{font-size:clamp(44px,6.4vw,80px);font-weight:800;letter-spacing:-.035em;max-width:900px;margin:0 auto}
+.final p{font-size:19px;max-width:560px;margin:24px auto 0}
+footer{border-top:1px solid var(--line);padding:70px 0 34px}
+.fgrid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}
+.fgrid p{font-size:15.5px;margin-top:14px;max-width:330px}
+.fgrid h6{font-size:14px;color:var(--ink);font-weight:800;margin-bottom:16px}
+.fgrid ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:15px;color:var(--muted)}
+.fgrid ul a:hover{color:var(--ink)}
+.claim{display:inline-flex;align-items:center;gap:8px;margin-top:18px;background:var(--ink);color:#F4F0ED;font-size:13px;font-weight:600;border-radius:999px;padding:6px 14px}
+.claim::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--pink)}
+.fbot{display:flex;justify-content:space-between;margin-top:56px;padding-top:24px;border-top:1px solid var(--line2);font-size:14px;color:var(--muted);flex-wrap:wrap;gap:12px}
+.fbot span.live::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--salmon);margin-right:8px}
+
+/* v2: client proof */
+.loved{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:30px;flex-wrap:wrap}
+.faces{display:flex}
+.faces img{width:38px;height:38px;border-radius:50%;border:2.5px solid var(--bg);margin-left:-10px;background:#fff}
+.faces img:first-child{margin-left:0}
+.loved span{font-size:14.5px;color:var(--body);text-align:left}
+.loved b{color:var(--ink)}
+.pane.rebrand{grid-template-columns:1fr 1fr}
+.pane.rebrand .shot{aspect-ratio:auto}
+.pane.rebrand .wide{grid-column:span 2}
+.pane.three{grid-template-columns:repeat(4,1fr)}
+.pane.three .shot{aspect-ratio:auto}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.st{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:6px}
+.st b{font-size:clamp(32px,3.4vw,44px);font-weight:800;color:var(--ink);letter-spacing:-.04em;line-height:1}
+.st span{font-size:15px;color:var(--body)}
+.st em{font-style:normal;margin-top:auto;padding-top:12px;display:flex;align-items:center;gap:8px;font-size:13.5px;color:var(--muted);font-weight:600}
+.st em img{width:26px;height:26px;border-radius:50%}
+.st.hero-st{background:var(--band);border-color:var(--salmon)}
+.t-track.rev{animation-direction:reverse;animation-duration:100s}
+.t-marq+.t-marq{margin-top:20px}
+.tc{align-self:flex-start}
+.tc q{font-size:17px}
+.who img{width:44px;height:44px;border-radius:50%;flex:none;box-shadow:0 0 0 2px var(--c)}
+.like{display:flex;align-items:center;gap:10px;margin:-4px 0 18px;font-size:13.5px;color:var(--muted)}
+.like .faces img{width:30px;height:30px;border-color:#fff}
+/* v3: meet saima */
+.meet{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.photo{position:relative}
+.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:28px;border:1px solid var(--line);box-shadow:0 40px 80px -40px rgba(56,65,67,.45)}
+.photo .tagp{position:absolute;background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 14px;box-shadow:0 16px 30px -18px rgba(22,22,22,.35);font-size:14px;color:var(--body);line-height:1.25}
+.photo .tagp b{display:block;font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.03em}
+.photo .t1{left:-22px;top:12%}.photo .t2{right:-22px;top:46%}.photo .t3{left:24px;bottom:-20px;display:flex;align-items:center;gap:10px}
+.photo .t3 i{width:10px;height:10px;border-radius:50%;background:var(--salmon)}
+.meet p{margin-top:16px;font-size:18px}
+.meet .sig{font-family:var(--serif);font-style:italic;font-size:26px;color:var(--ink);margin-top:26px}
+.meet .sig small{display:block;font-family:var(--sans);font-style:normal;font-size:14px;color:var(--muted);margin-top:2px}
+.pane.carousel{grid-template-columns:repeat(3,1fr)}
+.pane.client9{grid-template-columns:repeat(3,1fr)}
+/* v5: 3D testimonial columns */
+.stage3d{position:relative;height:760px;margin-top:40px;border:1px solid var(--line);border-radius:24px;overflow:hidden;perspective:1100px;background:var(--bg);display:flex;align-items:center;justify-content:center}
+.tilt{display:flex;gap:18px;align-items:flex-start;transform:translateX(-60px) translateZ(-80px) rotateX(24deg) rotateY(-12deg) rotateZ(18deg)}
+.vcol{height:1400px;overflow:hidden;flex:none}
+.vtrack{display:flex;flex-direction:column;gap:18px;animation:vup var(--d,60s) linear infinite}
+.vcol.rev .vtrack{animation-direction:reverse}
+.stage3d:hover .vtrack{animation-play-state:paused}
+@keyframes vup{to{transform:translateY(calc(-50% - 9px))}}
+.qc{width:290px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 10px 24px -18px rgba(56,65,67,.35)}
+.qc .hd{display:flex;align-items:center;gap:10px}
+.qc img{width:38px;height:38px;border-radius:50%;flex:none;box-shadow:0 0 0 2px var(--c)}
+.qc b{display:block;font-size:14.5px;color:var(--ink);line-height:1.2}
+.qc span{font-size:12px;color:var(--muted);font-weight:500;line-height:1.25;display:block}
+.qc p{margin-top:12px;font-size:14.5px;line-height:1.5;color:var(--body)}
+.fade{position:absolute;pointer-events:none;z-index:3}
+.fade.t{inset:0 0 auto 0;height:22%;background:linear-gradient(var(--bg),transparent)}
+.fade.b{inset:auto 0 0 0;height:22%;background:linear-gradient(transparent,var(--bg))}
+.fade.l{inset:0 auto 0 0;width:18%;background:linear-gradient(90deg,var(--bg),transparent)}
+.fade.r{inset:0 0 0 auto;width:18%;background:linear-gradient(270deg,var(--bg),transparent)}
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+
+/* responsive */
+@media (max-width:1000px){
+  .nav-links,.nav-cta .login{display:none}
+  .burger{display:flex}
+  .mobile-menu.open{display:flex;flex-direction:column;gap:4px;position:fixed;top:76px;left:16px;right:16px;z-index:49;background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px}
+  .mobile-menu a{padding:12px 14px;border-radius:10px;font-weight:600;color:var(--ink)}
+  .mobile-menu a:hover{background:var(--band)}
+  .app{grid-template-columns:1fr}.side{display:none}
+  .pane{grid-template-columns:repeat(2,1fr)}
+  .kit{grid-template-columns:1fr}
+  .flow-grid{grid-template-columns:1fr}
+  .step:nth-child(odd){border-right:0}.step:nth-child(3){border-bottom:1px solid var(--line2)}
+  .ba{grid-template-columns:1fr}
+  .cards3,.plans{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .meet{grid-template-columns:1fr;gap:48px}.photo{max-width:440px;margin:0 auto}
+  .pane.carousel,.pane.client9{grid-template-columns:repeat(2,1fr)}
+  .pane.three{grid-template-columns:1fr 1fr}
+  .demo-grid{grid-template-columns:1fr}
+  .calc{grid-template-columns:1fr}
+  .faq{grid-template-columns:1fr;gap:28px}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .kitband{flex-direction:column;align-items:flex-start}.kitband .btn{margin-left:0}
+}
+@media (max-width:640px){
+  section{padding:84px 0}
+  .wrap{padding:0 16px}
+  .step{padding:24px}
+  .deck{grid-template-columns:repeat(2,1fr)}
+  .deck .sl:last-child{grid-column:span 2;aspect-ratio:auto;min-height:120px}
+  .tc{width:300px}
+  .stats{grid-template-columns:1fr}
+  .stage3d{height:600px}
+  .tilt{transform:translateX(-30px) translateZ(-40px) rotateX(20deg) rotateY(-10deg) rotateZ(16deg);gap:12px}
+  .qc{width:230px}
+  .photo .t1{left:-6px}.photo .t2{right:-6px}
+  .pane.rebrand{grid-template-columns:1fr}.pane.rebrand .wide{grid-column:auto}
+  .coverflow{height:480px}
+  .dark{margin:0 8px;border-radius:24px;padding:84px 0}
+  .fgrid{grid-template-columns:1fr}
+  .hero h1{font-size:42px}
+  .hero p.sub{font-size:18px}
+  .tabs{width:100%}
+  .step .vis{padding:14px}
+  .cal{grid-template-columns:repeat(2,1fr)}
+  .plan .r{padding:9px 10px;font-size:13.5px}
+  .url{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:70%}
+  .nav-cta .btn{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <a href="#top" class="logo"><img src="assets/avatar.jpg" alt="Saima Chand"><span>Saima <b>Chand</b></span></a>
+  <nav class="nav-links">
+    <a href="#work">Work</a><a href="#process">Process</a><a href="#for-you">Who it's for</a><a href="#banner">Free banner</a><a href="#resources">Resources</a><a href="#packages">Packages</a>
+  </nav>
+  <div class="nav-cta">
+    <a class="login" href="https://www.linkedin.com/in/saima-chand-content-designer/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn btn-dark" href="https://calendly.com/saimachand/30min" target="_blank" rel="noopener">Book a call</a>
+    <button class="burger" aria-label="Menu" onclick="document.querySelector('.mobile-menu').classList.toggle('open')">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#161616" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+<div class="mobile-menu" onclick="this.classList.remove('open')">
+  <a href="#work">Work</a><a href="#process">Process</a><a href="#for-you">Who it's for</a><a href="#banner">Free banner</a><a href="#resources">Resources</a><a href="#packages">Packages</a>
+  <a href="https://calendly.com/saimachand/30min" target="_blank" rel="noopener">Book a call →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="smoke"><span></span><span></span><span></span><span></span></div>
+  <div class="hero-photo"><img src="assets/saima-hero-bw.jpg" alt=""></div>
+  <div class="hero-name"><i></i><span><b>Saima Chand</b> · Content Designer</span></div>
+  <div class="wrap"><div class="hero-copy">
+    <span class="pill"><i>1,000+</i> infographics designed · LinkedIn content design</span>
+    <h1>Your expertise built it. <br>Your LinkedIn should <br>bring the <span class="kw">clients.</span></h1>
+    <p class="sub">I'm Saima Chand, a LinkedIn content designer for founders and high-level professionals. I design your carousels, covers and infographics every month, done for you and on your brand, so your feed builds authority while you run the company.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-dark" href="https://calendly.com/saimachand/30min" target="_blank" rel="noopener">Book a free strategy call
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-light" href="#work">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#B8604F" stroke-width="2" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+        See the work</a>
+    </div>
+    <small>Done for you · On your brand · Ready to post</small>
+    <div class="loved"><div class="faces"><img src="assets/clients/charlie.jpg" alt=""><img src="assets/clients/mischa.jpg" alt=""><img src="assets/clients/rosie.jpg" alt=""><img src="assets/clients/alex.jpg" alt=""><img src="assets/clients/fatima.jpg" alt=""><img src="assets/clients/sebastian.jpg" alt=""><img src="assets/clients/brianna.jpg" alt=""><img src="assets/clients/danielw.jpg" alt=""></div><span><b>Worked with 60+ clients</b>,<br>including Charlie Hills, Dr. Shehz and Mischa Collins</span></div>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/saima-chand-content-designer/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+      <a href="https://www.instagram.com/its.saimachand/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.9 5.9 0 0 0-2.13 1.38A5.9 5.9 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13a5.9 5.9 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.38 5.9 5.9 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.38-2.13A5.9 5.9 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg></a>
+    </div>
+  </div></div>
+  <div class="marquee"><div class="track" id="logos"></div></div>
+</section>
+
+<!-- SHOWCASE -->
+<section class="showcase" id="work">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">The work</span>
+      <h2>Your expertise, one <span class="kw">feed.</span></h2>
+      <p class="lede">Client infographics, LinkedIn profile rebrands, animated GIFs and the brand systems behind them. Each one built on the client's own look.</p>
+    </div>
+    <div class="tabs rv" role="tablist">
+      <button class="on" data-t="0">Client infographics</button><button data-t="1">Carousels</button><button data-t="2">Profile rebrands</button><button data-t="3">Animated</button><button data-t="4">My own posts</button><button data-t="5">Brand system</button>
+    </div>
+    <div class="browser rv">
+      <div class="bar"><i></i><i></i><i></i><span class="url" id="url">linkedin.com/in/your-name/recent-activity</span></div>
+      <div class="app">
+        <aside class="side">
+          <div class="me"><img src="assets/avatar.jpg" alt=""><div><b>Saima Chand</b><em>Content Designer</em></div></div>
+          <a href="#work" class="on" style="--c:var(--pink)">Client infographics</a>
+          <a href="#work" style="--c:var(--tint)">Carousels</a>
+          <a href="#work" style="--c:var(--salmon)">Profile rebrands</a>
+          <a href="#work" style="--c:var(--tint)">Animated GIFs</a>
+          <a href="#work" style="--c:var(--pink)">My own posts</a>
+          <a href="#work" style="--c:var(--slate)">Brand kits</a>
+          <div class="stat"><b data-count="1000">0</b><span>+ infographics designed</span></div>
+        </aside>
+        <div class="main">
+          <div class="main-top"><div><h4 id="paneTitle">Client infographics</h4><span id="paneSub">Designed on each client's own brand kit</span></div><span class="chip">On your brand</span></div>
+          <div class="pane on client9">
+            <figure class="shot"><img src="assets/clients/claude-sales-50.jpg" alt="50 Claude Use Cases in Sales" loading="lazy"><figcaption>50 Claude Use Cases</figcaption></figure>
+            <figure class="shot"><img src="assets/clients/dw-leadmagnet.jpg" alt="Daniel Walter: The Lead Magnet Engine" loading="lazy"><figcaption>Daniel Walter</figcaption></figure>
+            <figure class="shot"><img src="assets/clients/shehz-5lens.jpg" alt="Dr. Shehz: 5 Lens Swaps" loading="lazy"><figcaption>Dr. Shehz</figcaption></figure>
+            <figure class="shot"><img src="assets/clients/fatima-aifacts.jpg" alt="Fatima Khan: Where AI Gets its Facts" loading="lazy"><figcaption>Fatima Khan</figcaption></figure>
+            <figure class="shot"><img src="assets/w-nsure-stack.jpg" alt="nSure.ai Payments Decisioning Stack" loading="lazy"><figcaption>nSure.ai</figcaption></figure>
+            <figure class="shot"><img src="assets/clients/dw-claude-team.jpg" alt="Daniel Walter: Mein Claude Team" loading="lazy"><figcaption>Daniel Walter</figcaption></figure>
+            <figure class="shot"><img src="assets/clients/fatima-toolkit.jpg" alt="Fatima Khan: My LinkedIn Toolkit" loading="lazy"><figcaption>Fatima Khan</figcaption></figure>
+            <figure class="shot"><img src="assets/w-catalyst.jpg" alt="Catalyst: Best Play per GTM Goal" loading="lazy"><figcaption>Catalyst</figcaption></figure>
+            <figure class="shot"><img src="assets/clients/fatima-framework.jpg" alt="Fatima Khan: LinkedIn Post Framework" loading="lazy"><figcaption>Fatima Khan</figcaption></figure>
+          </div>
+          <div class="pane carousel">
+            <figure class="shot"><img src="assets/clients/jw-0.jpg" alt="Organic growth carousel slide 1" loading="lazy"><figcaption>Cover</figcaption></figure>
+            <figure class="shot"><img src="assets/clients/jw-1.jpg" alt="Organic growth carousel slide 2" loading="lazy"><figcaption>01 · Attention</figcaption></figure>
+            <figure class="shot"><img src="assets/clients/jw-2.jpg" alt="Organic growth carousel slide 3" loading="lazy"><figcaption>02 · Explanation</figcaption></figure>
+            <figure class="shot"><img src="assets/clients/jw-3.jpg" alt="Organic growth carousel slide 4" loading="lazy"><figcaption>03 · Action</figcaption></figure>
+            <figure class="shot"><img src="assets/clients/jw-4.jpg" alt="Organic growth carousel slide 5" loading="lazy"><figcaption>04 · Strategy</figcaption></figure>
+            <figure class="shot"><img src="assets/clients/jw-5.jpg" alt="Organic growth carousel slide 6" loading="lazy"><figcaption>Closing slide</figcaption></figure>
+          </div>
+          <div class="pane rebrand">
+            <figure class="shot wide"><img src="assets/clients/rosie-banner.jpg" alt="Rosie Chong LinkedIn banner" loading="lazy"><figcaption>Rosie Chong · banner</figcaption></figure>
+            <figure class="shot"><img src="assets/clients/claire-light.jpg" alt="Claire Lawrence banner, light" loading="lazy"><figcaption>Claire Lawrence · light</figcaption></figure>
+            <figure class="shot"><img src="assets/clients/claire-dark.jpg" alt="Claire Lawrence banner, dark" loading="lazy"><figcaption>Claire Lawrence · dark</figcaption></figure>
+            <figure class="shot"><img src="assets/clients/rosie-featured.jpg" alt="Rosie Chong featured card" loading="lazy"><figcaption>Rosie Chong · featured</figcaption></figure>
+            <figure class="shot"><img src="assets/clients/mischa-featured.jpg" alt="Mischa Collins featured card" loading="lazy"><figcaption>Mischa Collins · featured</figcaption></figure>
+            <figure class="shot wide"><img src="assets/clients/naz-banner.jpg" alt="Naz Tadjbakhsh banner" loading="lazy"><figcaption>Naz Tadjbakhsh · banner</figcaption></figure>
+            <figure class="shot"><img src="assets/clients/naz-card1.jpg" alt="Naz Tadjbakhsh featured card" loading="lazy"><figcaption>Naz · featured card</figcaption></figure>
+            <figure class="shot"><img src="assets/clients/naz-card8.jpg" alt="Naz Tadjbakhsh featured card" loading="lazy"><figcaption>Naz · featured card</figcaption></figure>
+            <figure class="shot wide"><img src="assets/clients/mischa-banner.jpg" alt="Mischa Collins banner" loading="lazy"><figcaption>Mischa Collins · banner</figcaption></figure>
+          </div>
+          <div class="pane three">
+            <figure class="shot"><img src="assets/g-old-new.gif" alt="Animated: Old design vs new design" loading="lazy"><figcaption>Old vs New Design</figcaption></figure>
+            <figure class="shot"><img src="assets/w-playbook.gif" alt="Animated 2027 LinkedIn playbook" loading="lazy"><figcaption>2027 Playbook</figcaption></figure>
+            <figure class="shot"><img src="assets/g-design-dead.gif" alt="Animated: Design is dead" loading="lazy"><figcaption>Design Is Dead</figcaption></figure>
+            <figure class="shot"><img src="assets/g-follow-people.gif" alt="Animated: People follow people" loading="lazy"><figcaption>People Follow People</figcaption></figure>
+            <figure class="shot"><img src="assets/g-claude-code.gif" alt="Animated: LinkedIn content with Claude Code" loading="lazy"><figcaption>Content with Claude Code</figcaption></figure>
+            <figure class="shot"><img src="assets/g-banner-mistakes.gif" alt="Animated: Fix these 7 banner mistakes" loading="lazy"><figcaption>7 Banner Mistakes</figcaption></figure>
+            <figure class="shot"><img src="assets/clients/shehz-doctor-pay.gif" alt="Dr. Shehz animated doctor pay chart" loading="lazy"><figcaption>Dr. Shehz · 203K impressions</figcaption></figure>
+            <figure class="shot"><img src="assets/w-journey.gif" alt="Animated 0 to 10K journey" loading="lazy"><figcaption>0 → 10K Journey</figcaption></figure>
+          </div>
+          <div class="pane">
+            <figure class="shot"><img src="assets/w-5layers.jpg" alt="5 Layers of a Perfect LinkedIn Carousel" loading="lazy"><figcaption>5 Layers of a Carousel</figcaption></figure>
+            <figure class="shot"><img src="assets/w-growth-guide.jpg" alt="The Complete LinkedIn Growth Guide" loading="lazy"><figcaption>LinkedIn Growth Guide</figcaption></figure>
+            <figure class="shot"><img src="assets/w-41-tools.jpg" alt="41 AI Tools for Creators" loading="lazy"><figcaption>41 AI Tools</figcaption></figure>
+            <figure class="shot"><img src="assets/w-growth-climb.jpg" alt="The LinkedIn Growth Climb" loading="lazy"><figcaption>Growth Climb</figcaption></figure>
+          </div>
+          <div class="pane">
+            <div class="kit">
+              <div class="kitbox"><h5>Palette</h5>
+                <div class="sw"><div style="background:#F4F0ED">F4F0ED</div><div style="background:#F2BCB8">F2BCB8</div><div style="background:#DB9485">DB9485</div><div style="background:#A9B3B2">A9B3B2</div><div style="background:#384143;color:#fff">384143</div></div>
+                <p style="font-size:14.5px;margin-top:14px">Your colours, fixed once. Every post after this compounds the same look.</p>
+              </div>
+              <div class="kitbox typespec"><h5>Type</h5>
+                <div class="t1">Bold <span class="kw">titles</span></div>
+                <div class="t2"><em>A serif voice for the story</em></div>
+                <div class="t3">Clean body text, readable on a phone at arm's length.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" style="padding-top:40px">
+  <div class="wrap hw">
+    <div class="hw-side rv">
+      <span class="eyebrow">How it works</span>
+      <h2>From rough idea to inbound <span class="kw">DM</span></h2>
+      <p class="lede">You bring the expertise. I bring the strategy and the design. Nothing for you to open in Canva.</p>
+      <ul class="hw-idx" id="hwidx"><i class="hw-bar"></i><li data-i="0" class="on"><em>01</em><b>Strategy &amp; plan</b><span>The angle before the artboard</span></li><li data-i="1"><em>02</em><b>Design on your brand</b><span>One system, every piece</span></li><li data-i="2"><em>03</em><b>Post with a rhythm</b><span>Ready-to-post, every week</span></li><li data-i="3"><em>04</em><b>Attract, don't chase</b><span>The feed brings the DMs</span></li></ul>
+      <a class="btn btn-dark" href="https://calendly.com/saimachand/30min" target="_blank" rel="noopener">Book a free strategy call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="hw-main">
+      <article class="hw-card on rv" data-i="0">
+        <div class="hw-stage"><span class="hw-tag">Example brief</span>
+          <div class="hw-glass hw-brief">
+            <div class="hw-bh"><span><i></i>Content brief · Week 1</span><span>Carousel</span></div>
+            <dl>
+              <dt>Angle</dt><dd class="hw-serif">Why your founder page beats the company page</dd>
+              <dt>Audience</dt><dd>Founders &amp; agency owners</dd>
+              <dt>Goal</dt><dd>Saves → profile visits</dd>
+              <dt>Carries</dt><dd class="hw-chips"><span>Message</span><span>Proof</span><span>CTA</span></dd>
+            </dl>
+          </div>
+        </div>
+        <div class="hw-copy"><span class="hw-n">01</span><h3>Strategy &amp; plan</h3><p>We decide together what each piece should say and why, so the design carries a message, not just a look.</p></div>
+      </article>
+      <article class="hw-card rv" data-i="1">
+        <div class="hw-stage"><span class="hw-tag">Your brand kit</span>
+          <div class="hw-fan"><img src="assets/w-growth-guide.jpg" alt="Growth guide carousel"><img src="assets/w-5layers.jpg" alt="The 5 layers infographic"><img src="assets/w-41-tools.jpg" alt="41 tools infographic"></div>
+          <div class="hw-glass hw-chip-ok" style="right:22px;bottom:20px"><span class="hw-ok"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1F1F1F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span><b>Draft ready for review</b><small>Built on your brand kit</small></span></div>
+        </div>
+        <div class="hw-copy"><span class="hw-n">02</span><h3>Design on your brand</h3><p>Carousels, covers and infographics designed on one visual system. Revisions included until each piece is right.</p></div>
+      </article>
+      <article class="hw-card rv" data-i="2">
+        <div class="hw-stage"><span class="hw-tag">Example week</span>
+          <div class="hw-glass hw-week">
+            <div><h6>MON</h6><div class="hw-slot hw-full"><img src="assets/w-old-new.jpg" alt=""><em>Carousel</em></div></div>
+            <div><h6>TUE</h6><div class="hw-slot hw-eng">Engage</div></div>
+            <div><h6>WED</h6><div class="hw-slot hw-full"><img src="assets/w-growth-climb.jpg" alt=""><em>Infographic</em></div></div>
+            <div><h6>THU</h6><div class="hw-slot hw-full"><img src="assets/w-playbook.gif" alt=""><em>GIF</em></div></div>
+            <div><h6>FRI</h6><div class="hw-slot hw-eng">Engage</div></div>
+            <div class="hw-week-foot"><span>Delivered <b>ready to post</b></span><span>You approve what goes live</span></div>
+          </div>
+        </div>
+        <div class="hw-copy"><span class="hw-n">03</span><h3>Post with a rhythm</h3><p>Everything arrives ready to post, so a busy month never means a silent feed. You stay in control of what goes live.</p></div>
+      </article>
+      <article class="hw-card rv" data-i="3">
+        <div class="hw-stage"><span class="hw-tag">Example inbox</span>
+          <div class="hw-trail">Post <i>→</i> Save <i>→</i> Profile <i>→</i> DM</div>
+          <div class="hw-glass hw-dm">
+            <div class="hw-top"><span class="hw-av">F</span><span>A founder in your niche<small>Saw your carousel today</small></span></div>
+            <div class="hw-body">
+              <div class="hw-bub hw-in">Loved the post. <b>BRAND</b></div>
+              <div class="hw-bub hw-out">Thank you! Here's a link to grab 30 minutes.</div>
+            </div>
+            <div class="hw-booked"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 15l2 2 4-4"/></svg>Strategy call booked</div>
+          </div>
+        </div>
+        <div class="hw-copy"><span class="hw-n">04</span><h3>Attract, don't chase</h3><p>Your feed starts working like a storefront instead of a business card. The right people come to you.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- DARK -->
+<div class="dark">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="tag-d">CLIENT WORK</span>
+      <h2 style="margin-top:22px">Client posts people <span class="kw">save</span> and share</h2>
+    </div>
+    <div class="coverflow" id="cf"></div>
+    <div class="dots" id="cfdots"></div>
+    <div class="trust rv"><b>Your brand stays yours.</b> Every piece is built on your own brand kit and delivered ready to post.</div>
+
+    <div class="ba">
+      <div class="rv">
+        <span class="eyebrow" style="color:var(--d-2)">Before vs. after</span>
+        <h2>Designing it yourself vs. <span class="kw">done for you</span></h2>
+        <div class="ba-box bad"><h5>Doing it yourself</h5><ul>
+          <li>Evenings in Canva after the real work is done</li>
+          <li>Posts that look like everyone else's</li>
+          <li>A busy month means a silent feed</li>
+        </ul></div>
+        <div class="ba-box good"><h5>With Saima</h5><ul>
+          <li>Send notes or a voice memo. I find the angle and design it</li>
+          <li>8–12 pieces a month on one recognisable system</li>
+          <li>Strategy included: every piece carries a message</li>
+        </ul></div>
+        <a class="btn btn-orange" style="margin-top:26px" href="https://calendly.com/saimachand/30min" target="_blank" rel="noopener">Book a free strategy call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="flow rv">
+        <div class="fhub"><img src="assets/avatar.jpg" alt="">Saima Chand</div>
+        <svg class="fsvg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M50,0 C50,50 25,50 25,100"/><path d="M50,0 C50,50 75,50 75,100"/></svg>
+        <div class="frow c2"><div class="pearl fs"><span class="t"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.6-.7 1.6-1.7 0-.4-.2-.8-.4-1.1-.3-.3-.4-.7-.4-1.1a1.6 1.6 0 0 1 1.7-1.7h2c3 0 5.5-2.5 5.5-5.5C22 6 17.5 2 12 2z"/></svg>Brand kit</span><span class="u">YOUR COLOURS &amp; TYPE</span></div><div class="pearl fs"><span class="t"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>Strategy</span><span class="u">ANGLE · HOOK · PLAN</span></div></div>
+        <svg class="fsvg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M25,0 C25,50 50,50 50,100"/><path d="M75,0 C75,50 50,50 50,100"/></svg>
+        <div class="pearl fn"><span class="t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></svg>Your expertise</span><span class="u">NOTES · CALLS · VOICE MEMOS</span></div>
+        <div class="fline"></div>
+        <div class="pearl fn"><span class="t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>Drafted &amp; designed</span><span class="u">ON YOUR BRAND</span></div>
+        <svg class="fsvg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M50,0 C50,50 16.67,50 16.67,100"/><path d="M50,0 C50,50 50,50 50,100"/><path d="M50,0 C50,50 83.33,50 83.33,100"/></svg>
+        <div class="frow c3"><div class="pearl fs"><span class="t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 10 5-10 5L2 7Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>Carousel</span></div><div class="pearl fs"><span class="t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>Infographic</span></div><div class="pearl fs"><span class="t"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4Z"/></svg>GIF</span></div></div>
+        <svg class="fsvg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M16.67,0 C16.67,50 50,50 50,100"/><path d="M50,0 C50,50 50,50 50,100"/><path d="M83.33,0 C83.33,50 50,50 50,100"/></svg>
+        <div class="pearl fn"><span class="t"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Your review</span><span class="u">REVISIONS INCLUDED</span></div>
+        <div class="fline"></div>
+        <div class="pearl fn"><span class="t"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Posted every week</span><span class="u">YOU STAY IN CONTROL</span></div>
+        <svg class="fsvg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M50,0 C50,50 16.67,50 16.67,100"/><path d="M50,0 C50,50 50,50 50,100"/><path d="M50,0 C50,50 83.33,50 83.33,100"/></svg>
+        <div class="frow c3"><div class="pearl fs"><span class="t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>Saves</span></div><div class="pearl fs"><span class="t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Comments</span></div><div class="pearl fs"><span class="t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="m16 6-4-4-4 4"/><path d="M12 2v13"/></svg>Shares</span></div></div>
+        <svg class="fsvg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M16.67,0 C16.67,50 50,50 50,100"/><path d="M50,0 C50,50 50,50 50,100"/><path d="M83.33,0 C83.33,50 50,50 50,100"/></svg>
+        <div class="pearl fn"><span class="t"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>Inbound DM</span><span class="u">“BRAND”</span></div>
+        <div class="fline"></div>
+        <div class="fhub end"><b>Booked call</b><a class="btn btn-orange" href="https://calendly.com/saimachand/30min" target="_blank" rel="noopener">Book a free strategy call →</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COMPARE -->
+<section>
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow c">Why me</span>
+      <h2>Not a template. Not an <span class="kw">agency.</span></h2>
+      <p class="lede">A content designer who does the strategy and the design, on one system built for your brand. Trusted by founders, creators and agencies since 2024.</p>
+    </div>
+    <div class="table rv">
+      <table>
+        <thead><tr><th></th><th class="me-col">Saima Chand</th><th>DIY in Canva</th><th>Generic freelancer</th><th>Big agency</th></tr></thead>
+        <tbody>
+          <tr><td>Strategy and design in one person</td><td class="me-col"><span class="y">✓</span></td><td class="n">–</td><td class="n">Rarely</td><td>Split teams</td></tr>
+          <tr><td>Built on your own brand system</td><td class="me-col"><span class="y">✓</span></td><td class="n">–</td><td>Sometimes</td><td><span class="y">✓</span></td></tr>
+          <tr><td>Infographics, carousels and animated GIFs</td><td class="me-col"><span class="y">✓</span></td><td>Static only</td><td>Partial</td><td><span class="y">✓</span></td></tr>
+          <tr><td>Consistent every month</td><td class="me-col"><span class="y">✓</span></td><td class="n">–</td><td>Varies</td><td><span class="y">✓</span></td></tr>
+          <tr><td>Revisions included</td><td class="me-col"><span class="y">✓</span></td><td class="n">–</td><td>Extra</td><td>Rounds</td></tr>
+          <tr><td>You talk to the designer directly</td><td class="me-col"><span class="y">✓</span></td><td class="n">–</td><td><span class="y">✓</span></td><td class="n">Account manager</td></tr>
+          <tr><td>Your time per piece</td><td class="me-col"><b>Notes or a voice memo</b></td><td>Hours</td><td>Briefs</td><td>Meetings</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Columns are general categories, not specific providers.</p>
+  </div>
+</section>
+
+<!-- WHO -->
+<section id="for-you" style="padding-top:20px">
+  <div class="wrap">
+    <div class="rv"><span class="eyebrow">Who it's for</span><h2>Built for people who sell <span class="kw">expertise</span></h2></div>
+    <div class="cards3">
+      <div class="uc rv" style="--c:var(--pink)">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div>
+        <h3>Founders</h3>
+        <p>You built the company and the track record. Online, none of it shows yet.</p>
+        <ul><li>Your story, turned into a content plan</li><li>Carousels that explain what you do</li><li>A feed that matches the business</li><li>Zero hours in design tools</li></ul>
+        <div class="like"><div class="faces"><img src="assets/clients/rohan.jpg" alt=""><img src="assets/clients/alex.jpg" alt=""><img src="assets/clients/jonathan.jpg" alt=""><img src="assets/clients/claire.jpg" alt=""></div>Rohan, Alex, Jonathan, Claire</div>
+        <div class="hl">Authority before the sales call</div>
+      </div>
+      <div class="uc rv" style="--c:var(--salmon)">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></div>
+        <h3>Agency owners</h3>
+        <p>Your client work is premium. Your own LinkedIn should look the part.</p>
+        <ul><li>Frameworks turned into saveable visuals</li><li>Case studies people actually read</li><li>One look across every touchpoint</li><li>Consistent while you serve clients</li></ul>
+        <div class="like"><div class="faces"><img src="assets/clients/sebastian.jpg" alt=""><img src="assets/clients/conner.jpg" alt=""><img src="assets/clients/laiba.jpg" alt=""></div>Sebastian, Conner, Laiba</div>
+        <div class="hl">Look as good as the work you sell</div>
+      </div>
+      <div class="uc rv" style="--c:var(--tint)">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div>
+        <h3>Coaches &amp; experts</h3>
+        <p>Speaking coaches, AI and healthcare experts with deep knowledge to share.</p>
+        <ul><li>Complex ideas made simple and visual</li><li>Animated infographics that stop the scroll</li><li>Keyword-DM calls to action</li><li>Pieces built to be screenshotted</li></ul>
+        <div class="like"><div class="faces"><img src="assets/clients/jesus.jpg" alt=""><img src="assets/clients/andrew.jpg" alt=""><img src="assets/clients/fatima.jpg" alt=""><img src="assets/clients/rosie.jpg" alt=""></div>Dr. Jesús, Andrew, Fatima, Rosie</div>
+        <div class="hl">Expertise people screenshot</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FREE BANNER -->
+<section id="banner" style="padding-top:20px">
+  <div class="wrap gb">
+    <div class="rv">
+      <span class="eyebrow">Free every month</span>
+      <h2>Win a free LinkedIn <span class="kw">banner</span></h2>
+      <p class="lede">Every month I design one LinkedIn banner for free, for someone on this list. Leave your name and email to enter <b id="gbMonth">this month's</b> pick.</p>
+      <ul class="gb-steps"><li><b>1</b>Add your name &amp; email</li><li><b>2</b>One person picked monthly</li><li><b>3</b>I design your banner</li></ul>
+      <form class="lead-form" id="bannerForm" novalidate>
+        <div><label for="bnName">Your name</label><input id="bnName" name="name" autocomplete="name" placeholder="e.g. Sarah Khan" required></div>
+        <div><label for="bnEmail">Email</label><input id="bnEmail" name="email" type="email" autocomplete="email" placeholder="you@company.com" required></div>
+        <button class="btn btn-dark" type="submit">Enter this month's pick <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="fine">One email if you're picked, plus the odd LinkedIn tip. Unsubscribe anytime.</p>
+      </form>
+      <div class="lead-done" id="bannerDone"><span class="ok"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F1F1F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><div><b>You're in, <span id="bnWho"></span>.</b><span>If you're picked this month, I'll email you to start on your banner.</span></div></div>
+    </div>
+    <div class="gb-vis rv">
+      <div class="free"><b>$0</b>one banner,<br>every month</div>
+      <div class="pmock">
+        <div class="bn" id="gbBanners">
+          <img class="on" src="assets/clients/rosie-banner.jpg" alt="Banner designed for Rosie Chong">
+          <img src="assets/clients/mischa-banner.jpg" alt="Banner designed for Mischa Collins">
+          <img src="assets/clients/naz-banner.jpg" alt="Banner designed for Naz Tadjbakhsh">
+        </div>
+        <div class="pb"><span class="pm-who">Banner for <b id="gbWho">Rosie Chong</b></span><div class="pav">?</div><div class="ln a"></div><div class="ln b"></div><div class="ln c"></div></div>
+      </div>
+      <div class="gb-dots" id="gbDots"><i class="on"></i><i></i><i></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="t-head rv">
+      <div><span class="eyebrow">Client words</span><h2>60+ clients. Here's what they <span class="kw">say</span></h2></div>
+      <div class="badge"><div class="faces"><img src="assets/clients/charlie.jpg" alt=""><img src="assets/clients/rosie.jpg" alt=""><img src="assets/clients/alex.jpg" alt=""><img src="assets/clients/mischa.jpg" alt=""></div><span>LinkedIn<br>recommendations</span></div>
+    </div>
+    <div class="stats">
+      <div class="st hero-st rv"><b>203,407</b><span>impressions on one infographic</span><em><img src="assets/clients/shehz-doctor-pay.gif" alt="" style="object-fit:cover;object-position:top;border-radius:6px">Dr. Shehz · U.S. doctor pay post</em></div>
+      <div class="st rv"><b>100,000+</b><span>followers gained "through high-impact cheat sheets and carousels"</span><em><img src="assets/clients/charlie.jpg" alt="">Charlie Hills, in his words</em></div>
+      <div class="st rv"><b>10+ hrs</b><span>a week freed up "by owning the visual strategy"</span><em><img src="assets/clients/alex.jpg" alt="">Alex Cinovoj, in his words</em></div>
+      <div class="st rv"><b>1,000+</b><span>infographics designed for founders and creators</span><em><img src="assets/avatar.jpg" alt="">Saima Chand</em></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="stage3d rv" aria-label="Client testimonials">
+      <div class="tilt" id="tilt"></div>
+      <i class="fade t"></i><i class="fade b"></i><i class="fade l"></i><i class="fade r"></i>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages" style="padding-top:20px">
+  <div class="wrap">
+    <div class="rv"><span class="eyebrow">Packages</span><h2>Simple ways to <span class="kw">work</span> together</h2><p class="lede">Every brand is at a different stage, so I don't publish flat prices. On the call you get an exact quote, with no pressure.</p></div>
+
+    <div class="calc rv">
+      <div class="calc-l">
+        <h5><i>✦</i>WHAT IS DIY CONTENT COSTING YOU?</h5>
+        <div class="rng"><div><span>Posts per week</span><b id="v1">3</b></div><input type="range" id="r1" min="1" max="7" value="3"></div>
+        <div class="rng"><div><span>Hours you spend per post</span><b id="v2">2 hrs</b></div><input type="range" id="r2" min="1" max="6" value="2"></div>
+        <div class="rng"><div><span>What an hour of your time is worth</span><b id="v3">$250</b></div><input type="range" id="r3" min="50" max="1000" step="25" value="250"></div>
+        <small>A rough estimate based on your numbers.</small>
+      </div>
+      <div class="calc-r">
+        <div class="res"><span>⏱ Hours back per month</span><b id="o1">26 <small>hrs</small></b></div>
+        <div class="res"><span>↗ Your time, per month</span><b id="o2">$6,500</b><em id="o3">≈ $78,000 per year</em></div>
+        <a class="btn" href="https://calendly.com/saimachand/30min" target="_blank" rel="noopener">Get those hours back →</a>
+      </div>
+    </div>
+
+    <div class="plans">
+      <div class="plan-c rv">
+        <span class="no">01</span><h3>Brand System Setup</h3><p class="d">The foundation: a visual identity kit for your personal brand.</p>
+        <div class="price">Custom <small>one-off</small></div><p class="sm">Exact quote on the call</p>
+        <ul><li>Colours, type and layout rules</li><li>The visual system your content is built on</li><li>Works standalone</li><li>The natural start before a retainer</li></ul>
+        <a class="btn btn-light" href="https://calendly.com/saimachand/30min" target="_blank" rel="noopener">Book a free strategy call →</a>
+      </div>
+      <div class="plan-c pop rv">
+        <span class="flag">MOST CHOSEN</span>
+        <span class="no">02</span><h3>Content Design Retainer</h3><p class="d">Your LinkedIn, designed every month. Where most clients live.</p>
+        <div class="price">Custom <small>/ month</small></div><p class="sm">Exact quote on the call</p>
+        <ul><li>8–12 designed pieces per month</li><li>Carousels, covers and infographics</li><li>Content strategy and planning</li><li>Revisions included</li><li>Delivered on your brand, ready to post</li></ul>
+        <a class="btn btn-dark" href="https://calendly.com/saimachand/30min" target="_blank" rel="noopener">Book a free strategy call →</a>
+      </div>
+      <div class="plan-c rv">
+        <span class="no">03</span><h3>Free Strategy Call</h3><p class="d">Not sure yet? Start with a conversation.</p>
+        <div class="price">Free <small>30 min</small></div><p class="sm">No pitch deck, no obligation</p>
+        <ul><li>A look at where your LinkedIn is now</li><li>What you'd need each month</li><li>An honest answer on fit</li><li>If I'm not right for you, I'll say so</li></ul>
+        <a class="btn btn-light" href="https://calendly.com/saimachand/30min" target="_blank" rel="noopener">Pick a time →</a>
+      </div>
+    </div>
+
+    <div class="kitband rv">
+      <div class="glyph"><i style="--c:var(--pink)"></i><i style="--c:var(--salmon)"></i><i style="--c:var(--tint)"></i><i style="--c:var(--slate)"></i></div>
+      <div><span class="tg">INCLUDED IN EVERY PACKAGE</span><h3>One brand system behind every post</h3><p>We set your look up once. Every carousel, cover and GIF after that compounds the same recognisable style, so people know it's you before they read your name.</p></div>
+      <a class="btn btn-dark" href="https://www.linkedin.com/in/saima-chand-content-designer/" target="_blank" rel="noopener">DM me "BRAND" →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding-top:20px">
+  <div class="wrap faq">
+    <div class="rv"><span class="eyebrow">FAQ</span><h2>Questions, <span class="kw">answered</span></h2></div>
+    <div class="rv">
+      <details open><summary>What do I need to give you?</summary><p>Your expertise, in whatever form is easiest: notes, a call, a voice memo, a post you liked. I find the angle, plan the piece and design it.</p></details>
+      <details><summary>Do you write the content too?</summary><p>Strategy and planning are part of the retainer. We decide together what each piece should say and why, and I shape it into slides and visuals.</p></details>
+      <details><summary>Can you work with my existing brand?</summary><p>Yes. If you already have colours and fonts, I build on them. If you don't, the Brand System Setup creates them first.</p></details>
+      <details><summary>How much does it cost?</summary><p>Every brand is at a different stage, so there are no flat prices. On the free strategy call you get an exact quote, with no pressure and no obligation.</p></details>
+      <details><summary>Do you make animated content?</summary><p>Yes. Animated infographics and GIFs are a big part of my work, alongside static carousels, covers and infographics.</p></details>
+      <details><summary>Who posts the content?</summary><p>You do. Everything arrives ready to post, so you stay in control of what goes live and when.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section id="resources">
+  <div class="wrap">
+    <div class="center rv"><span class="eyebrow c">Free resources</span><h2>50+ editable infographic <span class="kw">templates</span></h2><p class="lede">Plus the guides I use with clients. Answer 4 quick questions to unlock everything. Most answers are one click.</p></div>
+    <div class="rs">
+      <div class="quiz rv" id="quiz">
+        <div class="qbar"><i class="on"></i><i></i><i></i><i></i></div>
+        <div class="qstep on" data-s="0"><small>Step 1 of 4</small><h3>Where should I send them?</h3>
+          <form class="lead-form" id="resForm" novalidate>
+            <div><label for="rsName">Your name</label><input id="rsName" autocomplete="name" placeholder="e.g. Sarah Khan" required></div>
+            <div><label for="rsEmail">Email</label><input id="rsEmail" type="email" autocomplete="email" placeholder="you@company.com" required></div>
+            <button class="btn btn-dark" type="submit">Next <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          </form></div>
+        <div class="qstep" data-s="1"><small>Step 2 of 4</small><h3>Your monthly revenue?</h3><div class="opts"><button type="button" class="opt" data-q="revenue" data-v="Under $5k"><i>1</i>Under $5k</button><button type="button" class="opt" data-q="revenue" data-v="$5k – $20k"><i>2</i>$5k – $20k</button><button type="button" class="opt" data-q="revenue" data-v="$20k – $50k"><i>3</i>$20k – $50k</button><button type="button" class="opt" data-q="revenue" data-v="$50k – $100k"><i>4</i>$50k – $100k</button><button type="button" class="opt" data-q="revenue" data-v="$100k+"><i>5</i>$100k+</button><button type="button" class="opt" data-q="revenue" data-v="Prefer not to say"><i>–</i>Prefer not to say</button></div><button class="qback" type="button">← Back</button></div>
+        <div class="qstep" data-s="2"><small>Step 3 of 4</small><h3>Biggest LinkedIn problem right now?</h3><div class="opts"><button type="button" class="opt" data-q="problem" data-v="No time to post"><i>⏱</i>No time to post</button><button type="button" class="opt" data-q="problem" data-v="Posts don't look premium"><i>✦</i>Posts don't look premium</button><button type="button" class="opt" data-q="problem" data-v="Low engagement"><i>↓</i>Low engagement</button><button type="button" class="opt" data-q="problem" data-v="No inbound leads"><i>✉</i>No inbound leads</button><button type="button" class="opt" data-q="problem" data-v="Don't know what to post"><i>?</i>Don't know what to post</button><button type="button" class="opt" data-q="problem" data-v="Profile doesn't convert"><i>◐</i>Profile doesn't convert</button></div><button class="qback" type="button">← Back</button></div>
+        <div class="qstep" data-s="3"><small>Step 4 of 4</small><h3>What do you want to achieve?</h3><div class="opts"><button type="button" class="opt" data-q="goal" data-v="More inbound clients"><i>→</i>More inbound clients</button><button type="button" class="opt" data-q="goal" data-v="Authority in my niche"><i>★</i>Authority in my niche</button><button type="button" class="opt" data-q="goal" data-v="Grow my followers"><i>↑</i>Grow my followers</button><button type="button" class="opt" data-q="goal" data-v="Launch an offer"><i>◎</i>Launch an offer</button><button type="button" class="opt" data-q="goal" data-v="A profile rebrand"><i>▣</i>A profile rebrand</button><button type="button" class="opt" data-q="goal" data-v="Post consistently"><i>⌁</i>Post consistently</button></div><button class="qback" type="button">← Back</button></div>
+        <div class="qstep qdone" data-s="4"><span class="ok"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F1F1F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><h3 style="margin:0">Unlocked, <span id="rsWho"></span>.</h3><p id="rsMsg">Your 50+ templates and guides are ready. The guides marked for you match your answers.</p><a class="btn btn-dark" id="rsCta" href="https://calendly.com/saimachand/30min" target="_blank" rel="noopener">Book a free strategy call <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      </div>
+      <div class="res rv" id="resGrid">
+        <div class="tpl" data-r="templates">
+          <div class="mos"><img src="assets/w-5layers.jpg" alt=""><img src="assets/w-growth-guide.jpg" alt=""><img src="assets/w-41-tools.jpg" alt=""><img src="assets/w-growth-climb.jpg" alt=""><span class="plus"><b>50+</b>templates</span></div>
+          <div><span class="tag">The big one</span><h4>50+ fully editable infographic templates</h4>
+            <ul><li>Swap in your words, colours and photo</li><li>Cheat sheets, frameworks, step-by-steps</li><li>Built from posts that got saved and shared</li></ul>
+            <span class="lockb"><svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Unlocks with the 4 questions</span>
+            <a class="dlb" id="tplLink" href="https://canva.link/40nah6klh8xe8c0" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 3v12M6 11l6 6 6-6M4 21h16"/></svg>Open the 50+ templates in Canva</a></div>
+        </div>
+        <div class="rcard" data-r="growth"><span class="rec">Recommended for you</span><div class="th"><img src="assets/w-growth-guide.jpg" alt="The Complete LinkedIn Growth Guide" loading="lazy"><div class="lock"><span><svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Unlock free</span></div></div><h4>The Complete LinkedIn Growth Guide</h4><p>Profile, content and DMs on one page</p><a class="dl" href="assets/w-growth-guide.jpg" download="LinkedIn-Growth-Guide-Saima-Chand.jpg"><svg viewBox="0 0 24 24"><path d="M12 3v12M6 11l6 6 6-6M4 21h16"/></svg>Download</a></div>
+        <div class="rcard" data-r="playbook"><span class="rec">Recommended for you</span><div class="th"><img src="assets/w-playbook.gif" alt="The 2027 LinkedIn Playbook" loading="lazy"><div class="lock"><span><svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Unlock free</span></div></div><h4>The 2027 LinkedIn Playbook</h4><p>What to post next year, animated</p><a class="dl" href="assets/w-playbook.gif" download="2027-LinkedIn-Playbook-Saima-Chand.gif"><svg viewBox="0 0 24 24"><path d="M12 3v12M6 11l6 6 6-6M4 21h16"/></svg>Download</a></div>
+        <div class="rcard" data-r="layers"><span class="rec">Recommended for you</span><div class="th"><img src="assets/w-5layers.jpg" alt="5 Layers of a Perfect Carousel" loading="lazy"><div class="lock"><span><svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Unlock free</span></div></div><h4>5 Layers of a Perfect Carousel</h4><p>The structure behind saveable carousels</p><a class="dl" href="assets/w-5layers.jpg" download="5-Layers-Carousel-Saima-Chand.jpg"><svg viewBox="0 0 24 24"><path d="M12 3v12M6 11l6 6 6-6M4 21h16"/></svg>Download</a></div>
+        <div class="rcard" data-r="banner"><span class="rec">Recommended for you</span><div class="th"><img src="assets/g-banner-mistakes.gif" alt="7 Banner Mistakes to Fix" loading="lazy"><div class="lock"><span><svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Unlock free</span></div></div><h4>7 Banner Mistakes to Fix</h4><p>Make your profile header convert</p><a class="dl" href="assets/g-banner-mistakes.gif" download="7-Banner-Mistakes-Saima-Chand.gif"><svg viewBox="0 0 24 24"><path d="M12 3v12M6 11l6 6 6-6M4 21h16"/></svg>Download</a></div>
+        <div class="rcard" data-r="tools"><span class="rec">Recommended for you</span><div class="th"><img src="assets/w-41-tools.jpg" alt="41 AI Tools for Creators" loading="lazy"><div class="lock"><span><svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Unlock free</span></div></div><h4>41 AI Tools for Creators</h4><p>The stack for faster content</p><a class="dl" href="assets/w-41-tools.jpg" download="41-AI-Tools-Saima-Chand.jpg"><svg viewBox="0 0 24 24"><path d="M12 3v12M6 11l6 6 6-6M4 21h16"/></svg>Download</a></div>
+        <div class="rcard" data-r="climb"><span class="rec">Recommended for you</span><div class="th"><img src="assets/w-growth-climb.jpg" alt="The LinkedIn Growth Climb" loading="lazy"><div class="lock"><span><svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Unlock free</span></div></div><h4>The LinkedIn Growth Climb</h4><p>Stage by stage, from 0 to inbound</p><a class="dl" href="assets/w-growth-climb.jpg" download="LinkedIn-Growth-Climb-Saima-Chand.jpg"><svg viewBox="0 0 24 24"><path d="M12 3v12M6 11l6 6 6-6M4 21h16"/></svg>Download</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final">
+  <div class="smoke"><span></span><span></span><span></span><span></span></div>
+  <div class="wrap" style="position:relative">
+    <h2 class="rv">Ready for a LinkedIn that pulls <span class="kw">clients</span> in?</h2>
+    <p class="rv">One 30-minute call. You tell me where your brand is. I'll tell you honestly whether I can help.</p>
+    <div class="hero-ctas rv">
+      <a class="btn btn-dark" href="https://calendly.com/saimachand/30min" target="_blank" rel="noopener">Book a free strategy call →</a>
+      <a class="btn btn-light" href="https://www.linkedin.com/in/saima-chand-content-designer/" target="_blank" rel="noopener">DM me "BRAND" on LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a href="#top" class="logo"><img src="assets/avatar.jpg" alt=""><span>Saima <b>Chand</b></span></a>
+        <p>LinkedIn Content Designer &amp; Personal Brand Designer for founders, agency owners and experts.</p>
+        <span class="claim">1,000+ infographics designed</span>
+        <div class="socials" style="justify-content:flex-start;margin-top:22px">
+          <a href="https://www.linkedin.com/in/saima-chand-content-designer/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.850 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+          <a href="https://www.instagram.com/its.saimachand/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88zM12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0z"/></svg></a>
+        </div>
+      </div>
+      <div><h6>Work</h6><ul><li><a href="#work">Infographics</a></li><li><a href="#work">Client work</a></li><li><a href="#work">Animated GIFs</a></li><li><a href="#work">Brand systems</a></li></ul></div>
+      <div><h6>Services</h6><ul><li><a href="#packages">Content Design Retainer</a></li><li><a href="#packages">Brand System Setup</a></li><li><a href="#banner">Free banner</a></li><li><a href="#resources">Free resources</a></li><li><a href="#process">How it works</a></li></ul></div>
+      <div><h6>Connect</h6><ul><li><a href="https://calendly.com/saimachand/30min" target="_blank" rel="noopener">Book a call</a></li><li><a href="https://www.linkedin.com/in/saima-chand-content-designer/" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://www.instagram.com/its.saimachand/" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+    </div>
+    <div class="fbot"><span>© 2026 Saima Chand. All rights reserved.</span><span class="live">Booking free strategy calls</span></div>
+  </div>
+</footer>
+
+<script>
+
+/* how it works: highlight the step in view */
+(()=>{const cards=[...document.querySelectorAll('.hw-card')],lis=[...document.querySelectorAll('#hwidx li')],bar=document.querySelector('#hwidx .hw-bar');if(!cards.length)return;
+const set=i=>{cards.forEach((c,k)=>c.classList.toggle('on',k==i));lis.forEach((l,k)=>l.classList.toggle('on',k<=i));const li=lis[i];if(li&&bar)bar.style.height=(li.offsetTop+li.offsetHeight-6)+'px';};
+const hwio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)set(+e.target.dataset.i)}),{rootMargin:'-45% 0px -45% 0px'});cards.forEach(c=>hwio.observe(c));
+lis.forEach(l=>l.addEventListener('click',()=>cards[+l.dataset.i].scrollIntoView({behavior:'smooth',block:'center'})));set(0);})();
+/* logo marquee: client + format names, repeated for a seamless loop */
+const tape=[["charlie","Charlie Hills",""],["shehz","Dr. Shehz",""],["mischa","Mischa Collins",""],["rosie","Rosie Chong",""],["sebastian","Sebastian Baumann","Gravity & Grandeur"],["conner","Conner Krizancic","SpeakrBrand"],["fatima","Fatima Khan",""],["danielw","Daniel Walter",""],["catalyst-mark","Catalyst",""],["alex","Alex Cinovoj",""],["roisin","Roisin Bennett","The AI Team"],["claire","Claire Lawrence",""],["jonathan","Jonathan Raynor","Fig Learning"],["jesus","Dr. Jesús Santaliestra","ProficientHub"],["andrew","Andrew C. Goodwin",""],["brianna","Brianna Bentler",""]];
+const cc=["var(--pink)","var(--salmon)","var(--tint)"];
+const row=tape.map(([p,n,co],i)=>`<span style="--c:${cc[i%3]}"><img src="assets/clients/${p}.jpg" alt="">${n}${co?`<small>${co}</small>`:""}</span>`).join("");
+document.getElementById("logos").innerHTML=row+row;
+
+/* showcase tabs */
+const meta=[["Client infographics","Designed on each client's own brand kit","linkedin.com/in/your-name/recent-activity"],
+["Carousels","Slide by slide: one idea per slide, one system across the deck","linkedin.com/in/your-name/recent-activity/documents"],
+["Profile rebrands","Banners and featured cards that say who you help","linkedin.com/in/your-name"],
+["Animated","Infographics that move: lines draw, numbers count","linkedin.com/in/your-name/recent-activity/images"],
+["My own posts","What I post on my own LinkedIn","linkedin.com/in/saima-chand-content-designer"],
+["Brand system","The kit every post is built on","your-brand-kit.pdf"]];
+const tabs=[...document.querySelectorAll(".tabs button")],panes=[...document.querySelectorAll(".pane")],sideLinks=[...document.querySelectorAll(".side a")];
+function showTab(i){tabs.forEach((b,j)=>b.classList.toggle("on",i===j));panes.forEach((p,j)=>p.classList.toggle("on",i===j));sideLinks.forEach((a,j)=>a.classList.toggle("on",i===j));
+  paneTitle.textContent=meta[i][0];paneSub.textContent=meta[i][1];url.textContent=meta[i][2];}
+tabs.forEach((b,i)=>b.onclick=()=>showTab(i));
+sideLinks.forEach((a,i)=>a.onclick=e=>{e.preventDefault();showTab(i)});
+
+/* auto-switch: Client infographics <-> Animated every 5s, while the section is on screen */
+(()=>{const CYCLE=[0,3],tabBar=document.querySelector(".tabs"),app=document.querySelector(".app"),work=document.getElementById("work");
+let cur=0,timer=null,on=true,inView=false,hover=false;
+new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){document.querySelectorAll(".pane.three img").forEach(i=>i.loading="eager");o.disconnect()}},{rootMargin:"600px 0px"}).observe(work);
+const mark=()=>{tabs.forEach(b=>b.classList.remove("auto"));if(on){void tabs[cur].offsetWidth;tabs[cur].classList.add("auto")}};
+const stop=()=>{clearTimeout(timer);timer=null};
+const run=()=>{stop();if(!on||!inView||hover)return;timer=setTimeout(()=>{cur=cur===CYCLE[0]?CYCLE[1]:CYCLE[0];showTab(cur);mark();run()},5000)};
+tabs.forEach((b,i)=>b.addEventListener("click",()=>{cur=i;on=CYCLE.includes(i);mark();run()}));
+sideLinks.forEach((a,i)=>a.addEventListener("click",()=>{cur=i;on=CYCLE.includes(i);mark();run()}));
+const pause=v=>{hover=v;tabBar.classList.toggle("paused",v);if(v)stop();else{mark();run()}};
+[app,tabBar].forEach(el=>{if(!el)return;el.addEventListener("mouseenter",()=>pause(true));el.addEventListener("mouseleave",()=>pause(false))});
+new IntersectionObserver(es=>{inView=es[0].isIntersecting;if(inView){mark();run()}else stop()},{threshold:.25}).observe(work);
+mark();})();
+
+/* coverflow */
+const cfData=[["assets/clients/shehz-doctor-pay.gif","How Much U.S. Doctors Earn","203,407 impressions on one post","Dr. Shehz"],
+["assets/clients/dw-leadmagnet.jpg","The Lead Magnet Engine","7 steps, one system, in German","Daniel Walter"],
+["assets/clients/fatima-aifacts.jpg","Where AI Gets its Facts","A data poster people screenshot","Fatima Khan"],
+["assets/clients/shehz-5lens.jpg","5 Lens Swaps","A mindset idea, made visual","Dr. Shehz"],
+["assets/w-nsure-stack.jpg","Payments Decisioning Stack","A dense system poster","nSure.ai"],
+["assets/clients/fatima-toolkit.jpg","My LinkedIn Toolkit","A tool ring around her portrait","Fatima Khan"],
+["assets/clients/dw-claude-team.jpg","Mein Claude Team","30+ agents, mapped as an org chart","Daniel Walter"],
+["assets/clients/jw-0.jpg","4 Assets, 1 Connected System","A 6-slide organic-growth carousel","Carousel"],
+["assets/clients/claude-sales-50.jpg","50 Claude Use Cases in Sales","A whole sales process on one page","Cheat sheet"]];
+const cf=document.getElementById("cf"),cfd=document.getElementById("cfdots");
+cf.innerHTML=cfData.map(([s,t,d,l])=>`<div class="cf"><img src="${s}" alt="${t}" loading="lazy"><span class="lbl">${l}</span><div class="cap"><b>${t}</b><span>${d}</span></div></div>`).join("");
+cfd.innerHTML=cfData.map((_,i)=>`<button aria-label="Slide ${i+1}"></button>`).join("");
+const cards=[...cf.children],dots=[...cfd.children];let cur=0,timer;
+function layout(){const n=cards.length;cards.forEach((c,i)=>{let o=((i-cur)%n+n)%n;if(o>n/2)o-=n;const a=Math.abs(o);
+  c.style.transform=`translateX(calc(-50% + ${o*58}%)) rotateY(${-o*24}deg) scale(${1-a*.14})`;c.style.zIndex=10-a;c.style.opacity=a>2?0:1-a*.25;c.style.filter=a?"brightness(.55)":"none";c.onclick=()=>go(i)});
+  dots.forEach((d,i)=>d.classList.toggle("on",i===cur));}
+function go(i){cur=i;layout();clearInterval(timer);timer=setInterval(()=>go((cur+1)%cards.length),4200)}
+dots.forEach((d,i)=>d.onclick=()=>go(i));go(0);
+
+/* testimonials (real quotes) */
+const tq=[["charlie", "Charlie Hills", "I help you (actually) use AI", "Saima is an excellent designer. She's fast. She's creative. She's communicative. I've worked with her since August 2024, and since then, I've gained over 100,000 followers through high-impact cheat sheets and carousels. I cannot recommend her enough."], ["mischa", "Mischa Collins", "Creator · Be Known Challenge", "Saima is incredible at what she does!!! She's helped design my infographics and carousels, clients infographics and more recently she designed my rebrand which blew up LinkedIn. My favourite part about working with Saima is you can give her an idea and she'll run with it. Your brief doesn't need to be perfect but you'll end up with a perfect design :)"], ["alex", "Alex Cinovoj", "Founder & CTO · AI & Infra", "I've worked with a lot of designers over the years. Most were good. A few were great. But Saima? She's different. Her carousels don't just look nice. They make people save them. Saima freed up 10+ hours of my week by owning the visual strategy."], ["jesus", "Dr. Jesús Santaliestra", "Founder, ProficientHub · Physician", "I worked with Saima on my LinkedIn profile optimization and the experience was 10/10. She quickly understood my brand and audience, sharpened my positioning, redesigned the banner and featured section, and rewrote my headline and About to be clear, compelling, and conversion-focused. If you want a profile that looks premium and performs even better, Saima is the person to call."], ["rosie", "Rosie Chong", "Personal Branding Creator, Australia", "I could not recommend Saima more!! She helped me redesign my LinkedIn banner and hero images, she was so quick at responding, worked well with me to bring my vision to life and was so wonderful. Overall if you're looking for a designer, she's the one to go with!"], ["sebastian", "Sebastian Baumann", "Managing Director, Gravity & Grandeur", "I worked with Saima for the design of high-impact cheat sheets and carousels for Gravity & Grandeur, and she delivered brilliantly. Saima combines remarkable speed, adaptability, and professionalism with a strong design instinct that consistently elevated our communications."], ["fatima", "Fatima Khan", "LinkedIn growth speaker & coach", "I've been working with Saima on various projects over the years, and she's always been an absolute delight to work with. Her designs are great, but what really keeps me coming back to her is how she manages communication and makes working with her easy and stress-free."], ["danielw", "Daniel Walter", "B2B lead gen · Fractional COO", "Saima has designed several of our projects and nailed exactly what we wanted every single time. She picks up on a brand quickly and turns that into layouts that are clean but still have character. She thinks along with you instead of just ticking off tasks."], ["andrew", "Andrew C. Goodwin", "Estate planning & business law, Ohio", "Saima is the go-to graphic designer for LinkedIn carousels and cheat sheets. Her creative talent is exceptional, her responsiveness is impressive, and the value she delivers far exceeds expectations. If you want a designer who will elevate your content, support your goals, and treat your business as if it were her own, Saima is the singular choice."], ["brianna", "Brianna Bentler", "AI for owners & coaches", "When I was struggling to translate complex AI automation concepts into engaging LinkedIn content that would actually stop the scroll, Saima transformed my vision into stunning carousels that made technical topics accessible and shareable."], ["roisin", "Roisin Bennett", "Founder, The AI Team", "Saima was undoubtedly the best find on LinkedIn that I have ever made. She has an incredible knack for creating content that builds trust and positions clients as industry authorities."], ["conner", "Conner Krizancic", "Founder & CEO, SpeakrBrand", "She's an easy communicator, gives honest and direct feedback, and has a rare ability to take an idea and truly make it her own. Her creativity is exceptional, and she consistently brings thoughtful, high-quality work to the table."], ["naz", "Naz Tadjbakhsh, Ph.D.", "Real estate, Orange County", "I loved working with Saima! She created my LinkedIn banner, feature cards, and profile picture, giving me the LinkedIn glow-up of my dreams! I gave her some rough ideas of what I wanted and she was able to provide solid options for me to choose from."], ["danielg", "Daniel Galea", "GenAI & Data Engineer", "From the very first conversation, Saima asked the right questions: what I want people to see, feel, and take away when they land on my profile. That process alone pushed me to think differently about my own positioning."], ["jonathan", "Jonathan Raynor", "CEO, Fig Learning", "I had the pleasure of working with Saima on a series of LinkedIn post designs, and she delivered exceptional work. Her design eye is sharp, but what stood out even more was her process of clear communication, quick turnaround, and the ability to translate abstract ideas into clean, impactful visuals."], ["claire", "Claire Lawrence", "Founder, TheIncomeToolkit.com", "She works quickly, really knows what she's doing and comes back with a banner and featured graphics that show she really understands the intake questions she asks. Huge recommend!!"], ["rohan", "Rohan Karunakaran", "Founder/CEO, Frontier Studio", "I hired Saima to create design assets for my LinkedIn posts and for some of our clients. She consistently delivered great work and had a collaborative work ethic. If you're looking for a reliable design partner, I would recommend Saima."], ["laiba", "Laiba Javed", "COO, LA Digital", "I've worked with a bunch of designers, but Saima stands out for how quickly she picks things up. She understands good design, is super responsive and always a few steps ahead when it comes to timelines and tweaks."], ["chris", "Chris March", "Business Adviser · Former GM & COO", "I highly recommend Saima for her exceptional ability to create clear and concise cheat sheets. Her attention to detail and commitment to quality are truly commendable. Saima is a pleasure to collaborate with."], ["gayathiri", "Gayathiri Ilango", "LinkedIn Client Acquisition Strategist", "I was looking for post designs that didn't just look good but actually captured the depth of the content behind them. That's when I came across Saima's work on LinkedIn. She was fast, efficient, clear with her process, and incredibly easy to work with. No confusion, no unnecessary back and forth, just momentum."], ["tasleem", "Tasleem Ahmad Fateh", "LinkedIn organic + ads", "Working with Saima was smooth from day one. She is someone who picks up on instructions quickly, delivers clean and on-brand designs and always hits deadlines without needing reminders."], ["jimmy", "Jimmy Lai", "Lawyer · Author of Quietly Influential", "Saima was professional and attentive. She listened to the design I wanted and made a great banner and featured section images for me. Highly recommend working with her."]];
+const cols=["var(--pink)","var(--salmon)","var(--tint)"];
+const qcard=([p,n,r,q],i)=>`<figure class="qc" style="--c:${cols[i%3]}"><div class="hd"><img src="assets/clients/${p}.jpg" alt="${n}"><div><b>${n}</b><span>${r}</span></div></div><p>${q}</p></figure>`;
+const NC=4,colsHTML=[];
+for(let c=0;c<NC;c++){const items=tq.map((t,i)=>[t,i]).filter(([,i])=>i%NC===c).map(([t,i])=>qcard(t,i)).join("");
+  colsHTML.push(`<div class="vcol${c%2?" rev":""}" style="--d:${55+c*8}s"><div class="vtrack">${items}${items}</div></div>`);}
+document.getElementById("tilt").innerHTML=colsHTML.join("");
+
+/* calculator */
+const r1=document.getElementById("r1"),r2=document.getElementById("r2"),r3=document.getElementById("r3");
+function fill(r){r.style.setProperty("--p",((r.value-r.min)/(r.max-r.min)*100)+"%")}
+function calc(){[r1,r2,r3].forEach(fill);const hrs=Math.round(r1.value*r2.value*4.33),val=hrs*r3.value;
+  v1.textContent=r1.value;v2.textContent=r2.value+(r2.value==1?" hr":" hrs");v3.textContent="$"+(+r3.value).toLocaleString("en-US");
+  o1.innerHTML=hrs+" <small>hrs</small>";o2.textContent="$"+val.toLocaleString("en-US");o3.textContent="≈ $"+(val*12).toLocaleString("en-US")+" per year";}
+[r1,r2,r3].forEach(r=>r.oninput=calc);calc();
+
+/* ---- lead capture ----
+   Paste your Google Apps Script web app URL below (see google-sheet-leads-script.js), or a Formspree URL.
+   Every banner entry and resource unlock is POSTed there with the answers. */
+const LEADS_ENDPOINT="https://script.google.com/macros/s/AKfycbwpp8VtLPKda1TRPuDrauQVQdOjpIHUr2N08Le0CDFqGtgFVlUGZR60QNc9Qs3cY3KCvw/exec";
+/* Paste the link to your 50+ editable templates (Canva / Figma / Drive) here. */
+const TEMPLATES_URL="https://canva.link/40nah6klh8xe8c0";
+(()=>{const a=document.getElementById("tplLink");if(TEMPLATES_URL)a.href=TEMPLATES_URL;else a.addEventListener("click",e=>{e.preventDefault();console.warn("TEMPLATES_URL is empty")})})();
+function sendLead(data){
+  if(!LEADS_ENDPOINT){console.warn("LEADS_ENDPOINT is empty: lead not sent",data);return Promise.resolve()}
+  const body=new URLSearchParams(data);
+  const gas=LEADS_ENDPOINT.includes("script.google.com");
+  return fetch(LEADS_ENDPOINT,{method:"POST",body,headers:gas?{}:{Accept:"application/json"},mode:gas?"no-cors":"cors"}).catch(()=>{});
+}
+const store={get:k=>{try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set:(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const validEmail=v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+function checkFields(n,e){let ok=true;[[n,n.value.trim().length>1],[e,validEmail(e.value.trim())]].forEach(([el,v])=>{el.style.borderColor=v?"":"#B8604F";if(!v)ok=false});if(!ok)(n.value.trim().length>1?e:n).focus();return ok}
+const firstName=n=>n.trim().split(/\s+/)[0];
+
+/* free banner */
+(()=>{const month=new Date().toLocaleString("en-US",{month:"long"});gbMonth.textContent=month+"'s";
+  const imgs=[...document.querySelectorAll("#gbBanners img")],dots=[...document.querySelectorAll("#gbDots i")],names=["Rosie Chong","Mischa Collins","Naz Tadjbakhsh"];let i=0;
+  setInterval(()=>{imgs[i].classList.remove("on");dots[i].classList.remove("on");i=(i+1)%imgs.length;imgs[i].classList.add("on");dots[i].classList.add("on");gbWho.textContent=names[i]},3200);
+  const done=n=>{bannerForm.style.display="none";bnWho.textContent=firstName(n);bannerDone.classList.add("on")};
+  const prev=store.get("sc_banner_"+month);if(prev)done(prev.name);
+  bannerForm.addEventListener("submit",e=>{e.preventDefault();if(!checkFields(bnName,bnEmail))return;
+    const data={form:"free-banner",month,name:bnName.value.trim(),email:bnEmail.value.trim()};
+    sendLead(data);store.set("sc_banner_"+month,data);done(data.name)});
+})();
+
+/* free resources quiz */
+(()=>{const steps=[...document.querySelectorAll(".qstep")],bars=[...document.querySelectorAll(".qbar i")],grid=document.getElementById("resGrid");
+  const ans={form:"free-resources"};let cur=0;
+  const go=n=>{cur=n;steps.forEach((s,k)=>s.classList.toggle("on",k===n));bars.forEach((b,k)=>b.classList.toggle("on",k<=Math.min(n,3)))};
+  const recMap={"No time to post":["growth","playbook"],"Posts don't look premium":["layers","tools"],"Low engagement":["climb","layers"],"No inbound leads":["playbook","growth"],"Don't know what to post":["playbook","growth"],"Profile doesn't convert":["banner","growth"]};
+  const highRev=["$20k – $50k","$50k – $100k","$100k+"];
+  const unlock=a=>{grid.classList.add("open");const rec=recMap[a.problem]||[];grid.querySelectorAll(".rcard").forEach(c=>c.classList.toggle("is-rec",rec.includes(c.dataset.r)));
+    rsWho.textContent=firstName(a.name||"");
+    if(!highRev.includes(a.revenue)){rsCta.href="#banner";rsCta.removeAttribute("target");rsCta.firstChild.textContent="Enter the free banner pick "}
+    go(4)};
+  const prev=store.get("sc_resources");if(prev)unlock(prev);
+  resForm.addEventListener("submit",e=>{e.preventDefault();if(!checkFields(rsName,rsEmail))return;ans.name=rsName.value.trim();ans.email=rsEmail.value.trim();go(1)});
+  document.querySelectorAll(".opt").forEach(b=>b.addEventListener("click",()=>{
+    b.parentElement.querySelectorAll(".opt").forEach(o=>o.classList.remove("sel"));b.classList.add("sel");ans[b.dataset.q]=b.dataset.v;
+    setTimeout(()=>{if(cur<3)go(cur+1);else{sendLead(ans);store.set("sc_resources",ans);unlock(ans)}},220)}));
+  document.querySelectorAll(".qback").forEach(b=>b.addEventListener("click",()=>go(Math.max(0,cur-1))));
+  grid.querySelectorAll(".rcard,.tpl").forEach(c=>c.addEventListener("click",e=>{if(!grid.classList.contains("open")){e.preventDefault();document.getElementById("quiz").scrollIntoView({behavior:"smooth",block:"center"});(cur===0?rsName:null)?.focus({preventScroll:true})}}));
+})();
+
+/* counter + reveal */
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(!en.isIntersecting)return;const el=en.target;el.classList.add("in");
+  if(el.dataset.count){const end=+el.dataset.count,t0=performance.now();(function tick(t){const p=Math.min((t-t0)/1400,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3))).toLocaleString("en-US");if(p<1)requestAnimationFrame(tick)})(t0)}
+  io.unobserve(el)}),{threshold:.15});
+document.querySelectorAll(".rv,[data-count]").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
