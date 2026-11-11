@@ -74,7 +74,7 @@ section{padding:120px 0}
   -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 38%),linear-gradient(180deg,#000 62%,transparent 94%);-webkit-mask-composite:source-in;
   mask-image:linear-gradient(90deg,transparent 0%,#000 38%),linear-gradient(180deg,#000 62%,transparent 94%);mask-composite:intersect}
 .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(244,240,237,0) 50%,rgba(244,240,237,.0) 100%),rgba(244,240,237,.08);mix-blend-mode:multiply}
-.hero-name{position:absolute;right:36px;bottom:150px;z-index:2;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.78);backdrop-filter:blur(10px);border:1px solid rgba(230,211,207,.9);border-radius:999px;padding:8px 16px 8px 10px;font-size:13.5px;color:var(--muted);box-shadow:0 14px 30px -18px rgba(56,65,67,.45)}
+.hero-name{position:absolute;right:36px;bottom:auto;top:110px;z-index:2;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.78);backdrop-filter:blur(10px);border:1px solid rgba(230,211,207,.9);border-radius:999px;padding:8px 16px 8px 10px;font-size:13.5px;color:var(--muted);box-shadow:0 14px 30px -18px rgba(56,65,67,.45)}
 .hero-name i{width:8px;height:8px;border-radius:50%;background:var(--salmon)}
 .hero-name b{color:var(--ink)}
 .hero .wrap{z-index:1;width:100%}
@@ -753,6 +753,31 @@ footer{border-top:1px solid var(--line);padding:70px 0 34px}
 .gift-done a{display:inline-block;margin-top:8px;font-weight:700;color:var(--deep);font-size:15px}
 .gift-pane.done form,.gift-pane.done .pre{display:none}.gift-pane.done .gift-done{display:flex}
 @media (max-width:640px){.gift{right:8px;left:8px;bottom:8px;width:auto;max-width:none;border-radius:22px}.gift-img{display:none}.gift-body{padding:14px 16px 16px}.gift-pane p,.gift-pane small{display:none}.gift-tabs{margin-right:42px}.gift-x{top:16px;right:14px}.gift-pane h4{font-size:19px}}
+
+/* v20: small corner gift card (teaser) */
+.gt{position:fixed;right:20px;bottom:20px;z-index:79;display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px 12px 10px 10px;box-shadow:0 18px 40px -18px rgba(22,22,22,.4);cursor:pointer;max-width:300px;opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .4s,transform .4s,border-radius .3s,padding .3s}
+.gt.on{opacity:1;transform:none;pointer-events:auto;animation:gtnudge 9s ease-in-out 3s infinite}
+.gt:hover{box-shadow:0 22px 46px -18px rgba(22,22,22,.5)}
+@keyframes gtnudge{0%,88%,100%{transform:none}91%{transform:translateY(-5px)}94%{transform:none}97%{transform:translateY(-3px)}}
+.gt-th{position:relative;width:46px;height:46px;flex:none}
+.gt-th img{position:absolute;width:32px;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:5px;border:2px solid #fff;box-shadow:0 6px 12px -6px rgba(22,22,22,.5);top:3px}
+.gt-th img:nth-child(1){left:0;transform:rotate(-10deg)}.gt-th img:nth-child(2){left:13px;transform:rotate(8deg)}
+.gt-dot{position:absolute;top:-4px;right:-4px;width:12px;height:12px;border-radius:50%;background:var(--salmon);border:2px solid #fff}
+.gt-dot::after{content:"";position:absolute;inset:-2px;border-radius:50%;border:2px solid var(--salmon);animation:gtping 2.4s ease-out infinite}
+@keyframes gtping{0%{transform:scale(1);opacity:.7}100%{transform:scale(2.2);opacity:0}}
+.gt-tx b{display:block;font-size:15px;font-weight:800;color:var(--ink);letter-spacing:-.01em}
+.gt-tx span{display:block;font-size:13px;color:var(--muted);margin-top:1px}
+.gt-go{width:30px;height:30px;border-radius:50%;background:var(--slate);color:#fff;display:grid;place-items:center;flex:none}
+.gt-go svg{width:14px;height:14px}
+.gt-x{position:absolute;top:-9px;left:-9px;width:24px;height:24px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;opacity:0;transition:opacity .2s}
+.gt:hover .gt-x{opacity:1}
+.gt-x svg{width:10px;height:10px}
+.gt-ic{display:none;width:28px;height:28px;color:var(--ink)}
+.gt.mini{padding:12px;border-radius:50%;gap:0}
+.gt.mini .gt-th,.gt.mini .gt-tx,.gt.mini .gt-go,.gt.mini .gt-x{display:none}
+.gt.mini .gt-ic{display:block;position:relative}
+.gt.mini .gt-ic .gt-dot{top:-6px;right:-6px}
+@media (max-width:640px){.gt{right:12px;bottom:12px;padding:8px 10px 8px 8px;gap:10px}.gt-tx span{display:none}.gt-th{width:40px;height:40px}.gt-th img{width:28px}.gt-x{opacity:1}}
 </style>
 </head>
 <body>
@@ -807,6 +832,13 @@ footer{border-top:1px solid var(--line);padding:70px 0 34px}
 
 <!-- PACKAGES -->
 
+<div class="gt" id="gt" role="button" tabindex="0" aria-label="Open free gifts">
+  <button class="gt-x" type="button" aria-label="Make smaller"><svg viewBox="0 0 24 24" fill="none" stroke="#161616" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <div class="gt-th"><img src="assets/w-growth-guide.jpg" alt=""><img src="assets/w-5layers.jpg" alt=""><i class="gt-dot"></i></div>
+  <div class="gt-tx"><b>2 free gifts for you</b><span>50+ templates · a free banner</span></div>
+  <span class="gt-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+  <span class="gt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg><i class="gt-dot"></i></span>
+</div>
 <!-- GIFT POP-UP -->
 <div class="gift" id="gift" role="dialog" aria-label="Free templates and free banner" aria-hidden="true">
   <button class="gift-x" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="#161616" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
@@ -1455,8 +1487,9 @@ document.querySelectorAll(".rv,[data-count]").forEach(el=>io.observe(el));
   const tabs=[...g.querySelectorAll(".gift-tabs button")],panes=[...g.querySelectorAll(".gift-pane")],imgs=[...g.querySelectorAll(".gift-img .gsc")];
   const tags=["FREE · 50+ TEMPLATES","FREE · ONE BANNER A MONTH"];
   const tab=i=>{tabs.forEach((b,k)=>b.classList.toggle("on",k===i));panes.forEach((p,k)=>p.classList.toggle("on",k===i));imgs.forEach((m,k)=>m.classList.toggle("on",k===i));giftTag.textContent=tags[i]};
-  const open=i=>{tab(i||0);g.classList.add("on");g.setAttribute("aria-hidden","false")};
-  const close=()=>{g.classList.remove("on");g.setAttribute("aria-hidden","true");ss.set("sc_gift_closed","1")};
+  const gt=document.getElementById("gt");const open=i=>{tab(i||0);g.classList.add("on");g.setAttribute("aria-hidden","false");gt.classList.remove("on")};
+  const close=()=>{g.classList.remove("on");g.setAttribute("aria-hidden","true");showGt()};
+  const showGt=()=>{if(!(resDone()&&bnDone()))gt.classList.add("on")};
   tabs.forEach((b,k)=>b.addEventListener("click",()=>tab(k)));
   g.querySelector(".gift-x").addEventListener("click",close);
   document.addEventListener("keydown",e=>{if(e.key==="Escape"&&g.classList.contains("on"))close()});
@@ -1472,7 +1505,11 @@ document.querySelectorAll(".rv,[data-count]").forEach(el=>io.observe(el));
     const a=document.createElement("a");a.href="#resources";document.body.appendChild(a);a.click();a.remove();
     setTimeout(()=>document.getElementById("quiz").scrollIntoView({behavior:"smooth",block:"center"}),350)});
   new MutationObserver(sync).observe(document.getElementById("resGrid"),{attributes:true,attributeFilter:["class"]});
-  if(!ss.get("sc_gift_closed")&&!(resDone()&&bnDone()))setTimeout(()=>{if(scrollY<innerHeight*0.9)open(resDone()?1:0)},innerWidth<=640?9000:4000);
+  if(ss.get("sc_gt_mini"))gt.classList.add("mini");
+  gt.addEventListener("click",e=>{if(e.target.closest(".gt-x")){e.stopPropagation();gt.classList.add("mini");ss.set("sc_gt_mini","1");return}open(resDone()?1:0)});
+  gt.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open(resDone()?1:0)}});
+  const phone=()=>innerWidth<=640;
+  if(phone()){const onS=()=>{if(scrollY>260){showGt();removeEventListener("scroll",onS)}};addEventListener("scroll",onS,{passive:true})}else setTimeout(showGt,2500);
 })();
 </script>
 </body>
