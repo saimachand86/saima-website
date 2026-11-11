@@ -1319,6 +1319,12 @@ const firstName=n=>n.trim().split(/\s+/)[0];
   document.querySelectorAll(".opt").forEach(b=>b.addEventListener("click",()=>{
     b.parentElement.querySelectorAll(".opt").forEach(o=>o.classList.remove("sel"));b.classList.add("sel");ans[b.dataset.q]=b.dataset.v;
     setTimeout(()=>{if(cur<3)go(cur+1);else{sendLead(ans);store.set("sc_resources",ans);unlock(ans)}},220)}));
+  /* log every download (name + email from the quiz) to the Downloads tab */
+  const logDl=item=>{const a=store.get("sc_resources")||ans;const d=new URLSearchParams({form:"download",item,name:a.name||"",email:a.email||""});
+    try{if(navigator.sendBeacon&&navigator.sendBeacon(LEADS_ENDPOINT,d))return}catch(e){}
+    fetch(LEADS_ENDPOINT,{method:"POST",body:d,mode:"no-cors",keepalive:true}).catch(()=>{})};
+  grid.querySelectorAll(".rcard .dl").forEach(b=>b.addEventListener("click",()=>{if(grid.classList.contains("open"))logDl(b.closest(".rcard").querySelector("h4").textContent)}));
+  document.getElementById("tplLink").addEventListener("click",()=>{if(grid.classList.contains("open"))logDl("50+ Canva templates")});
   document.querySelectorAll(".qback").forEach(b=>b.addEventListener("click",()=>go(Math.max(0,cur-1))));
   grid.querySelectorAll(".rcard,.tpl").forEach(c=>c.addEventListener("click",e=>{if(!grid.classList.contains("open")){e.preventDefault();document.getElementById("quiz").scrollIntoView({behavior:"smooth",block:"center"});(cur===0?rsName:null)?.focus({preventScroll:true})}}));
 })();
