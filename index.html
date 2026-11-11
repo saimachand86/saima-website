@@ -714,6 +714,45 @@ footer{border-top:1px solid var(--line);padding:70px 0 34px}
 .hpanel .rv{opacity:1;transform:none}
 #work{padding-top:60px}
 @media (max-width:640px){.hub .hub-tabs{top:76px;width:auto;margin-left:0;margin-right:0;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;scrollbar-width:none}.hub .hub-tabs::-webkit-scrollbar{display:none}.hub .hub-tabs button{flex:none}.offer-chips li{font-size:13.5px}.offer-sec,.hub{padding:56px 0}}
+
+/* v19: hero gift pop-up */
+.gift-pill{display:inline-flex;align-items:center;gap:9px;margin-top:18px;padding:8px 14px 8px 8px;border-radius:999px;background:var(--band);border:1px solid var(--line);font-size:14.5px;font-weight:700;color:var(--ink);cursor:pointer;transition:transform .2s}
+.gift-pill:hover{transform:translateY(-1px)}
+.gift-pill i{width:28px;height:28px;border-radius:50%;background:var(--pink);display:grid;place-items:center}
+.gift-pill i svg{width:16px;height:16px}
+.gift-pill em{font-style:normal;color:var(--deep)}
+.gift{position:fixed;right:24px;bottom:24px;z-index:80;width:384px;max-width:calc(100% - 32px);background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 40px 90px -30px rgba(22,22,22,.45);overflow:hidden;transform:translateY(24px) scale(.98);opacity:0;pointer-events:none;transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .35s}
+.gift.on{transform:none;opacity:1;pointer-events:auto}
+.gift-x{position:absolute;top:12px;right:12px;z-index:2;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.92);border:1px solid var(--line);display:grid;place-items:center;cursor:pointer}
+.gift-x svg{width:14px;height:14px}
+.gift-img{height:150px;position:relative;background:var(--band);overflow:hidden}
+.gsc{position:absolute;inset:0;opacity:0;transition:opacity .4s}.gsc.on{opacity:1}
+.gsc.fan img{position:absolute;top:18px;left:50%;width:84px;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:9px;border:3px solid #fff;box-shadow:0 14px 26px -12px rgba(22,22,22,.45)}
+.gsc.fan img:nth-child(1){transform:translateX(-128%) rotate(-9deg)}
+.gsc.fan img:nth-child(2){transform:translateX(-50%) translateY(-6px);z-index:1}
+.gsc.fan img:nth-child(3){transform:translateX(28%) rotate(9deg)}
+.gsc.bn img{position:absolute;left:18px;right:18px;top:22px;width:calc(100% - 36px);height:auto;border-radius:10px;border:3px solid #fff;box-shadow:0 14px 26px -12px rgba(22,22,22,.45)}
+.gift-img span{position:absolute;left:14px;top:12px;z-index:2;background:var(--ink);color:#F4F0ED;font-size:12px;font-weight:700;padding:5px 11px;border-radius:999px}
+.gift-body{padding:16px 20px 20px}
+.gift-tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:var(--bg);border:1px solid var(--line2);padding:4px;border-radius:12px}
+.gift-tabs button{padding:9px 6px;border-radius:9px;font-size:14px;font-weight:700;color:var(--muted);cursor:pointer}
+.gift-tabs button.on{background:#fff;color:var(--ink);box-shadow:0 2px 8px -4px rgba(22,22,22,.3)}
+.gift-pane{display:none;margin-top:14px}.gift-pane.on{display:block}
+.gift-pane h4{font-size:21px;font-weight:800;letter-spacing:-.02em;color:var(--ink);line-height:1.15}
+.gift-pane h4 .kw{color:var(--deep)}
+.gift-pane p{font-size:15px;color:var(--body);margin-top:6px}
+.gift-pane form{display:grid;gap:8px;margin-top:14px}
+.gift-pane input{width:100%;font:inherit;font-size:15.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:11px;padding:11px 14px;outline:none}
+.gift-pane input:focus{border-color:var(--salmon);box-shadow:0 0 0 3px rgba(242,188,184,.45)}
+.gift-pane .btn{width:100%;justify-content:center;height:48px;margin-top:2px}
+.gift-pane small{display:block;font-size:13px;color:var(--muted);text-align:center;margin-top:8px}
+.gift-done{display:none;gap:12px;align-items:flex-start;margin-top:14px}
+.gift-done .ok{width:40px;height:40px;border-radius:50%;background:var(--pink);display:grid;place-items:center;flex:none}
+.gift-done b{display:block;color:var(--ink);font-size:16.5px}
+.gift-done span{font-size:15px;color:var(--body)}
+.gift-done a{display:inline-block;margin-top:8px;font-weight:700;color:var(--deep);font-size:15px}
+.gift-pane.done form,.gift-pane.done .pre{display:none}.gift-pane.done .gift-done{display:flex}
+@media (max-width:640px){.gift{right:8px;left:8px;bottom:8px;width:auto;max-width:none;border-radius:22px}.gift-img{display:none}.gift-body{padding:14px 16px 16px}.gift-pane p,.gift-pane small{display:none}.gift-tabs{margin-right:42px}.gift-x{top:16px;right:14px}.gift-pane h4{font-size:19px}}
 </style>
 </head>
 <body>
@@ -744,7 +783,7 @@ footer{border-top:1px solid var(--line);padding:70px 0 34px}
   <div class="hero-name"><i></i><span><b>Saima Chand</b> · Content Designer</span></div>
   <div class="wrap"><div class="hero-copy">
     <span class="pill"><i>1,000+</i> infographics designed · LinkedIn content design</span>
-    <h1>I design your LinkedIn <br>so it brings you <span class="kw">clients.</span></h1>
+    <h1>I build your LinkedIn <br>so it brings you <span class="kw">clients.</span></h1>
     <p class="sub">8–12 carousels, covers and infographics every month, on your brand and ready to post. Strategy included. You run the company, I run your feed.</p>
     <ul class="offer-chips"><li>8–12 pieces a month</li><li>Strategy &amp; planning</li><li>Revisions included</li><li>Exact quote on a free call</li></ul>
     <div class="hero-ctas">
@@ -755,6 +794,7 @@ footer{border-top:1px solid var(--line);padding:70px 0 34px}
         What is DIY costing you?</a>
     </div>
     
+    <button class="gift-pill" type="button" data-gift="0"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg></i>2 free gifts: <em>50+ templates</em> &amp; a free banner</button>
     <div class="loved"><div class="faces"><img src="assets/clients/charlie.jpg" alt=""><img src="assets/clients/mischa.jpg" alt=""><img src="assets/clients/rosie.jpg" alt=""><img src="assets/clients/alex.jpg" alt=""><img src="assets/clients/fatima.jpg" alt=""><img src="assets/clients/sebastian.jpg" alt=""><img src="assets/clients/brianna.jpg" alt=""><img src="assets/clients/danielw.jpg" alt=""></div><span><b>Worked with 60+ clients</b>,<br>including Charlie Hills, Dr. Shehz and Mischa Collins</span></div>
     <div class="socials">
       <a href="https://www.linkedin.com/in/saima-chand-content-designer/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
@@ -766,6 +806,26 @@ footer{border-top:1px solid var(--line);padding:70px 0 34px}
 
 
 <!-- PACKAGES -->
+
+<!-- GIFT POP-UP -->
+<div class="gift" id="gift" role="dialog" aria-label="Free templates and free banner" aria-hidden="true">
+  <button class="gift-x" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="#161616" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <div class="gift-img"><div class="gsc fan on"><img src="assets/w-41-tools.jpg" alt=""><img src="assets/w-growth-guide.jpg" alt=""><img src="assets/w-5layers.jpg" alt=""></div><div class="gsc bn"><img src="assets/clients/rosie-banner.jpg" alt=""></div><span id="giftTag">FREE · 50+ TEMPLATES</span></div>
+  <div class="gift-body">
+    <div class="gift-tabs"><button class="on" type="button" data-g="0">Free templates</button><button type="button" data-g="1">Free banner</button></div>
+    <div class="gift-pane on" data-g="0">
+      <div class="pre"><h4>50+ editable infographic <span class="kw">templates</span></h4><p>Plus the 6 guides I use with clients. Free, yours to keep.</p></div>
+      <form id="gRes" novalidate><input id="gRsName" autocomplete="name" placeholder="Your name"><input id="gRsEmail" type="email" autocomplete="email" placeholder="you@company.com"><button class="btn btn-dark" type="submit">Send me the templates <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><small>3 quick questions next, then everything unlocks.</small></form>
+      <div class="gift-done"><span class="ok"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F1F1F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><div><b>Your templates are unlocked.</b><span>Open them any time on this page.</span><br><a href="#resources" data-close>Go to my templates →</a></div></div>
+    </div>
+    <div class="gift-pane" data-g="1">
+      <div class="pre"><h4>Win a free LinkedIn <span class="kw">banner</span></h4><p>I design one banner for free every month. Enter <b id="gMonth">this month's</b> pick.</p></div>
+      <form id="gBn" novalidate><input id="gBnName" autocomplete="name" placeholder="Your name"><input id="gBnEmail" type="email" autocomplete="email" placeholder="you@company.com"><button class="btn btn-dark" type="submit">Enter this month's pick <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><small>One email if you're picked. Unsubscribe anytime.</small></form>
+      <div class="gift-done"><span class="ok"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F1F1F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><div><b>You're in, <i id="gBnWho" style="font-style:normal"></i>.</b><span>Check your inbox for a thank-you note.</span><br><a href="#" data-g-go="0">Also grab the 50+ free templates →</a></div></div>
+    </div>
+  </div>
+</div>
+
 <section id="offer" class="offer-sec">
   <div class="wrap">
     <div class="rv"><span class="eyebrow">The offer</span><h2>What it costs you to keep doing it <span class="kw">yourself</span></h2><p class="lede">Move the sliders. Then pick how you want to work together. No flat prices: you get an exact quote on the call.</p></div>
@@ -1386,6 +1446,33 @@ document.querySelectorAll(".rv,[data-count]").forEach(el=>io.observe(el));
   const open=id=>{const t=document.getElementById(id);if(!t)return false;const p=t.closest('.hpanel');if(p){show(p.closest('.hub'),+p.dataset.p);requestAnimationFrame(()=>p.closest('.hub').scrollIntoView({behavior:'smooth'}));return true}return false};
   document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;if(open(a.getAttribute('href').slice(1)))e.preventDefault()});
   if(location.hash)open(location.hash.slice(1));
+})();
+
+/* v19: gift pop-up (feeds the same banner + resources forms) */
+(()=>{const g=document.getElementById("gift");if(!g)return;
+  const month=new Date().toLocaleString("en-US",{month:"long"});gMonth.textContent=month+"'s";
+  const ss={get:k=>{try{return sessionStorage.getItem(k)}catch(e){return null}},set:(k,v)=>{try{sessionStorage.setItem(k,v)}catch(e){}}};
+  const tabs=[...g.querySelectorAll(".gift-tabs button")],panes=[...g.querySelectorAll(".gift-pane")],imgs=[...g.querySelectorAll(".gift-img .gsc")];
+  const tags=["FREE · 50+ TEMPLATES","FREE · ONE BANNER A MONTH"];
+  const tab=i=>{tabs.forEach((b,k)=>b.classList.toggle("on",k===i));panes.forEach((p,k)=>p.classList.toggle("on",k===i));imgs.forEach((m,k)=>m.classList.toggle("on",k===i));giftTag.textContent=tags[i]};
+  const open=i=>{tab(i||0);g.classList.add("on");g.setAttribute("aria-hidden","false")};
+  const close=()=>{g.classList.remove("on");g.setAttribute("aria-hidden","true");ss.set("sc_gift_closed","1")};
+  tabs.forEach((b,k)=>b.addEventListener("click",()=>tab(k)));
+  g.querySelector(".gift-x").addEventListener("click",close);
+  document.addEventListener("keydown",e=>{if(e.key==="Escape"&&g.classList.contains("on"))close()});
+  document.querySelectorAll("[data-gift]").forEach(b=>b.addEventListener("click",()=>open(+b.dataset.gift)));
+  g.querySelectorAll("[data-close]").forEach(a=>a.addEventListener("click",()=>close()));
+  g.querySelector("[data-g-go]").addEventListener("click",e=>{e.preventDefault();tab(0)});
+  const resDone=()=>!!store.get("sc_resources"),bnDone=()=>!!store.get("sc_banner_"+month);
+  const sync=()=>{panes[0].classList.toggle("done",resDone());panes[1].classList.toggle("done",bnDone());const b=store.get("sc_banner_"+month);if(b)gBnWho.textContent=firstName(b.name||"")};
+  sync();
+  const ok=(n,e)=>{let good=true;[[n,n.value.trim().length>1],[e,validEmail(e.value.trim())]].forEach(([el,v])=>{el.style.borderColor=v?"":"#B8604F";if(!v)good=false});if(!good)(n.value.trim().length>1?e:n).focus();return good};
+  gBn.addEventListener("submit",e=>{e.preventDefault();if(!ok(gBnName,gBnEmail))return;bnName.value=gBnName.value.trim();bnEmail.value=gBnEmail.value.trim();bannerForm.requestSubmit();sync()});
+  gRes.addEventListener("submit",e=>{e.preventDefault();if(!ok(gRsName,gRsEmail))return;rsName.value=gRsName.value.trim();rsEmail.value=gRsEmail.value.trim();resForm.requestSubmit();close();
+    const a=document.createElement("a");a.href="#resources";document.body.appendChild(a);a.click();a.remove();
+    setTimeout(()=>document.getElementById("quiz").scrollIntoView({behavior:"smooth",block:"center"}),350)});
+  new MutationObserver(sync).observe(document.getElementById("resGrid"),{attributes:true,attributeFilter:["class"]});
+  if(!ss.get("sc_gift_closed")&&!(resDone()&&bnDone()))setTimeout(()=>{if(scrollY<innerHeight*0.9)open(resDone()?1:0)},innerWidth<=640?9000:4000);
 })();
 </script>
 </body>
