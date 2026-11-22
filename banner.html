@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Win a free LinkedIn banner | Saima Chand</title>
+<meta name="description" content="Every month Saima Chand designs one LinkedIn banner for free. Enter this month's pick.">
+<meta property="og:title" content="Win a free LinkedIn banner">
+<meta property="og:description" content="Every month I design one LinkedIn banner for free. Enter this month's pick.">
+<meta property="og:image" content="assets/clients/rosie-banner.jpg">
+<link rel="icon" href="assets/avatar.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4F0ED;--line:#E6D3CF;--line2:#EDE3DF;--ink:#161616;--body:#2B2A28;--muted:#5C5653;--pink:#F2BCB8;--salmon:#DB9485;--deep:#B8604F;--slate:#384143;--sans:"Inter Tight",system-ui,sans-serif;--serif:"Lora",Georgia,serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--body);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px 16px}
+.wrap{width:100%;max-width:560px}
+.banner{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px -42px rgba(56,65,67,.45);aspect-ratio:4/1;background:#fff}
+.banner img{width:100%;height:100%;object-fit:cover;display:block}
+h1{font-size:clamp(32px,7vw,44px);font-weight:800;line-height:1.05;letter-spacing:-.025em;color:var(--ink);margin:28px 0 12px}
+.kw{color:var(--deep)}
+.lede{color:var(--muted);font-size:17px}
+.lede b{color:var(--ink)}
+form,.done{background:#fff;border:1px solid var(--line2);border-radius:22px;padding:22px;margin-top:24px;box-shadow:0 30px 60px -42px rgba(56,65,67,.45)}
+form{display:grid;gap:14px}
+label{font-size:13px;font-weight:700;color:var(--ink);display:block}
+input{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:11px;padding:12px 14px;margin-top:6px;outline:none;transition:border-color .2s,box-shadow .2s}
+input:focus{border-color:var(--salmon);box-shadow:0 0 0 3px rgba(242,188,184,.45)}
+input.bad{border-color:var(--deep)}
+.err{display:none;font-size:13px;color:var(--deep);margin-top:6px}
+.bad+.err{display:block}
+button{display:flex;align-items:center;justify-content:center;gap:10px;height:52px;border:0;border-radius:12px;background:var(--slate);color:#fff;font:inherit;font-weight:700;font-size:16px;cursor:pointer;box-shadow:0 10px 24px -10px rgba(56,65,67,.7);transition:background .2s}
+button:hover{background:#2c3436}
+button{white-space:nowrap}
+@media (max-width:400px){button{font-size:15px}form,.done{padding:18px}}
+button svg{width:18px;height:18px}
+.fine{font-size:13px;color:var(--muted);text-align:center}
+.done{display:none;gap:14px;align-items:flex-start}
+.done.on{display:flex}
+.ok{flex:none;width:36px;height:36px;border-radius:50%;background:var(--pink);display:grid;place-items:center}
+.done b{display:block;color:var(--ink);font-size:18px}
+.done span{color:var(--muted);font-size:15px}
+.done b span{font-size:inherit;color:inherit}
+.done a{color:var(--deep);font-weight:600;font-size:15px}
+.by{display:flex;align-items:center;gap:10px;margin-top:22px;font-size:14px;color:var(--muted)}
+.by img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+.by a{color:var(--ink);font-weight:700;text-decoration:none}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="banner"><img src="assets/clients/rosie-banner.jpg" alt="A LinkedIn banner Saima designed for Rosie Chong"></div>
+  <h1>Win a free LinkedIn <span class="kw">banner</span></h1>
+  <p class="lede">Every month I design one LinkedIn banner for free. Leave your name, email and LinkedIn profile link to enter <b id="month">this month's</b> pick.</p>
+
+  <form id="f" novalidate>
+    <div><label for="name">Your name</label><input id="name" autocomplete="name" placeholder="e.g. Sarah Khan" required><div class="err">Please add your name.</div></div>
+    <div><label for="email">Email</label><input id="email" type="email" autocomplete="email" placeholder="you@company.com" required><div class="err">Please add a valid email.</div></div>
+    <div><label for="profile">Your LinkedIn profile link</label><input id="profile" type="url" inputmode="url" autocomplete="url" placeholder="linkedin.com/in/your-name" required><div class="err">Paste your LinkedIn profile link, like linkedin.com/in/your-name</div></div>
+    <button type="submit">Enter this month's pick <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    <p class="fine">One email if you're picked, plus the odd LinkedIn tip. Unsubscribe anytime.</p>
+  </form>
+
+  <div class="done" id="done"><span class="ok"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F1F1F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><div><b>You're in, <span id="who"></span>.</b><span>If you're picked this month, I'll email you to start on your banner.</span><br><a href="./">See my work →</a></div></div>
+
+  <div class="by"><img src="assets/avatar.jpg" alt=""><span><a href="./">Saima Chand</a> · Content Designer</span></div>
+</main>
+<script>
+const LEADS_ENDPOINT="https://script.google.com/macros/s/AKfycbwpp8VtLPKda1TRPuDrauQVQdOjpIHUr2N08Le0CDFqGtgFVlUGZR60QNc9Qs3cY3KCvw/exec";
+const month=new Date().toLocaleString("en-US",{month:"long"});
+document.getElementById("month").textContent=month+"'s";
+const $=id=>document.getElementById(id);
+const f=$("f"),done=$("done"),who=$("who"),nameEl=$("name"),emailEl=$("email"),profileEl=$("profile");
+const store={get:k=>{try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set:(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const firstName=n=>n.trim().split(/\s+/)[0];
+const normProfile=v=>{v=v.trim();return /^https?:\/\//i.test(v)?v:"https://"+v.replace(/^\/+/,"")};
+const checks=[[nameEl,v=>v.trim().length>1],[emailEl,v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim())],[profileEl,v=>/linkedin\.com\/(in|company)\/[^\s\/?#]+/i.test(v.trim())]];
+const showDone=n=>{f.style.display="none";who.textContent=firstName(n);done.classList.add("on")};
+const prev=store.get("sc_banner_"+month);if(prev)showDone(prev.name);
+checks.forEach(([el])=>el.addEventListener("input",()=>el.classList.remove("bad")));
+f.addEventListener("submit",e=>{e.preventDefault();
+  let first=null;checks.forEach(([el,ok])=>{const good=ok(el.value);el.classList.toggle("bad",!good);if(!good&&!first)first=el});
+  if(first){first.focus();return}
+  const data={form:"free-banner",month,name:nameEl.value.trim(),email:emailEl.value.trim(),profile:normProfile(profileEl.value),source:"banner-page"};
+  fetch(LEADS_ENDPOINT,{method:"POST",body:new URLSearchParams(data),mode:"no-cors"}).catch(()=>{});
+  store.set("sc_banner_"+month,data);showDone(data.name)});
+</script>
+</body>
+</html>
